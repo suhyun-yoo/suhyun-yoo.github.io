@@ -22,12 +22,6 @@ button{
     background-color: transparent;
 }
 
-/* body */
-body{
-    width: 90%;
-    margin: 0 auto;
-}
-
 /* header */
 #nav{
     height: 75px;
@@ -38,10 +32,11 @@ body{
 }
 
 header nav .logobox{
-    width: 50px;
-    height: 50px;
+    /* width: 50px;
+    height: 50px; */
+    padding-left: 20px;
+    box-sizing: border-box;
     float: left;
-    padding-left: 50px;
 }
 
 header nav ul{
@@ -59,6 +54,7 @@ header nav li{
     background-color: lightskyblue;
     width: 50px;
     height: 25px;
+    cursor: pointer;
 }
 
 .banner{
@@ -90,10 +86,17 @@ header nav li{
 .banner .textBox button{
     background-color: rgb(247, 247, 247);
     border-radius: 5px;
-    width: 70px;
+    width: 100px;
     height: 25px;
     margin-top: 10px;
     box-sizing: border-box;
+}
+
+.banner .textBox button:hover{
+    background-color: rgb(0, 0, 0);
+    color: wheat;
+    cursor: pointer;
+    transition-duration: 0.5s;
 }
 
 /* section */
@@ -146,8 +149,106 @@ header nav li{
     transform: translate(-50%, -50%);
 }
 
-/* box2 */
+.box1 .innerBox .textBox p{
+    font-size: 13px;
+}
 
+/* box2 */
+.box2{
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    background-color: rgb(211, 238, 255);
+    box-sizing: border-box;
+    margin-top: -1px;
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box2 .textBox{
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.box2 .textBox h3{
+    margin-bottom: 20px;
+}
+
+.box2 .textBox p{
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+.box2 .imgBox{
+    width: 400px;
+    height: 350px;
+    position: relative;
+}
+
+.box2 .imgBox img{
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    z-index: 1;
+
+    position: absolute;
+    top: 7%;
+}
+
+/* box3 */
+.box3{
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    margin-top: -1px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.box3 .innerBox{
+    margin-right: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box3 .innerBox img{
+    flex-wrap:wrap;
+    width: calc(23% - 10px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid lightgray;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* box4 */
+.box4{
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    background-color: rgb(211, 238, 255);
+    box-sizing: border-box;
+    margin-top: -1px;
+    height: 300px;
+    position: relative;
+}
+
+.box4 .textBox{
+    width: 70%;
+    text-align: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box4 .textBox h2{
+    margin-bottom: 20px;
+}
 
 /* footer */
 footer{
@@ -157,18 +258,29 @@ footer{
     padding-left: 20px;
     box-sizing: border-box;
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
 }
 
-footer .imgBox{
-    width: 50px;
-    height: 50px;
+.footerLeft{
+    border-right: 2px solid white;
+    margin : 0px 30px 10px 40px ;
+    box-sizing: border-box;
+    width: 35%;
+    height: 100px;
+
+    position: relative;
 }
+
+.footerLeft .textBox{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 
 footer .textBox p{
     font-size: 13px;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
     box-sizing: border-box;
     color: white;
 }
@@ -182,18 +294,20 @@ footer .textBox input{
     box-sizing: border-box;
 }
 
-.footerLeft{
-    border-right: 2px solid rgb(21, 21, 42);
-    margin-right: 30px;
-    box-sizing: border-box;
-    width: 30%;
-}
-
-.footerRight table{
+.footerMiddle table{
     text-align: left;
+    color: white;
 }
 
-.footerRight table th,
-.footerRight table td{
+.footerMiddle table th,
+.footerMiddle table td{
     border-right: 40px solid transparent;
+}
+
+.footerMiddle table td{
+    font-size: 13px;
+}
+
+.footerRight{
+    margin: auto 10px 0 auto;
 }
