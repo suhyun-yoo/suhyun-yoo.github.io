@@ -1,2 +1,199 @@
 @charset "utf-8";
 
+/* 초기화 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+ul, li{
+    list-style: none;
+}
+
+button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+/* body */
+body{
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* header */
+#nav{
+    height: 75px;
+    background-color: rgb(206, 221, 226);
+    padding: 10px;
+    box-sizing: border-box;
+    line-height: 50px;
+}
+
+header nav .logobox{
+    width: 50px;
+    height: 50px;
+    float: left;
+    padding-left: 50px;
+}
+
+header nav ul{
+    float: right;
+}
+
+header nav li{
+    float: left;
+    margin-right: 20px;
+    box-sizing: border-box;
+}
+
+.Btn{
+    border-radius: 5px;
+    background-color: lightskyblue;
+    width: 50px;
+    height: 25px;
+}
+
+.banner{
+    height: 400px;
+    width: 100%;
+    /* background-color: antiquewhite; */
+    background: url(https://i.pinimg.com/736x/a7/a1/7d/a7a17d50e9fe651481c71cac95a09319.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -500px;
+    color: white;
+    text-align: center;
+
+    position: relative;
+}
+
+.banner .textBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner .textBox h1{
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.banner .textBox button{
+    background-color: rgb(247, 247, 247);
+    border-radius: 5px;
+    width: 70px;
+    height: 25px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+/* section */
+.box1{
+    border: 1px solid gray;
+    box-sizing: border-box;
+    display: flex;
+    height: 500px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1 .innerBox .imgBox{
+    width: 90%;
+    height: 250px;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+.box1 .innerBox .imgBox img{
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.box1 .innerBox .textBox{
+    background-color: aliceblue;
+    widows: calc(33.333% - 30px);
+    height: 150px;
+    width: 90%;
+    margin-top: 0;
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+.box1 .innerBox .textBox h3{
+    border-bottom: 2px solid black;
+    box-sizing: border-box;
+    width: 100px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.box1 .innerBox .textBox div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* box2 */
+
+
+/* footer */
+footer{
+    background-color: lightslategray;
+    height: 200px;
+    padding-top: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+footer .imgBox{
+    width: 50px;
+    height: 50px;
+}
+
+footer .textBox p{
+    font-size: 13px;
+    margin-bottom: 60px;
+    box-sizing: border-box;
+    color: white;
+}
+
+footer .textBox input{
+    border-radius: 3px;
+    border: none;
+    height: 25px;
+    width: 200px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.footerLeft{
+    border-right: 2px solid rgb(21, 21, 42);
+    margin-right: 30px;
+    box-sizing: border-box;
+    width: 30%;
+}
+
+.footerRight table{
+    text-align: left;
+}
+
+.footerRight table th,
+.footerRight table td{
+    border-right: 40px solid transparent;
+}
