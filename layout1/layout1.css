@@ -44,9 +44,17 @@ header nav ul{
 }
 
 header nav li{
+    cursor: pointer;
     float: left;
     margin-right: 20px;
+    text-align: center;
     box-sizing: border-box;
+    transition-duration: 0.7s;
+}
+
+header nav li:hover{
+    border-bottom: 5px solid black;
+    margin-top: -10px;
 }
 
 .Btn{
@@ -84,7 +92,7 @@ header nav li{
 }
 
 .banner .textBox button{
-    background-color: rgb(247, 247, 247);
+    background-color: rgba(213, 229, 245, 0.623);
     border-radius: 5px;
     width: 100px;
     height: 25px;
@@ -93,7 +101,7 @@ header nav li{
 }
 
 .banner .textBox button:hover{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 84);
     color: wheat;
     cursor: pointer;
     transition-duration: 0.5s;
@@ -124,12 +132,13 @@ header nav li{
 }
 
 .box1 .innerBox .textBox{
-    background-color: aliceblue;
-    widows: calc(33.333% - 30px);
+    background-color: rgba(221, 221, 221, 0.832);
     height: 150px;
     width: 90%;
     margin-top: 0;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 
     position: relative;
 }
@@ -217,7 +226,7 @@ header nav li{
 
 .box3 .innerBox img{
     flex-wrap:wrap;
-    width: calc(23% - 10px);
+    width: calc(15% - 10px);
     margin-right: 10px;
     margin-bottom: 10px;
     border: 1px solid lightgray;
@@ -253,34 +262,29 @@ header nav li{
 /* footer */
 footer{
     background-color: lightslategray;
-    height: 200px;
+    height: 300px;
     padding-top: 20px;
     padding-left: 20px;
     box-sizing: border-box;
-    display: flex;
-    align-items: center;
-}
-
-.footerLeft{
-    border-right: 2px solid white;
-    margin : 0px 30px 10px 40px ;
-    box-sizing: border-box;
-    width: 35%;
-    height: 100px;
-
     position: relative;
 }
 
-.footerLeft .textBox{
+.footerLeft{
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
+.textBox{
+    margin: 0 auto;
+    padding: 10px;
+}
 
-footer .textBox p{
-    font-size: 13px;
-    margin-bottom: 10px;
+footer .textBox h2{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 15px;
     box-sizing: border-box;
     color: white;
 }
@@ -289,25 +293,36 @@ footer .textBox input{
     border-radius: 3px;
     border: none;
     height: 25px;
-    width: 200px;
+    width: 400px;
     padding-left: 10px;
     box-sizing: border-box;
+    margin-right: 5px;
+    float: left;
 }
 
-.footerMiddle table{
-    text-align: left;
+footer .textBox button{
+    float: left;
+}
+
+table{
+    width: 100%;
+    padding-top: 20px;
+    text-align: center;
     color: white;
 }
 
-.footerMiddle table th,
-.footerMiddle table td{
+table th,
+table td{
     border-right: 40px solid transparent;
+    border: 1px solid transparent;
 }
 
-.footerMiddle table td{
+table td{
     font-size: 13px;
 }
 
 .footerRight{
-    margin: auto 10px 0 auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
