@@ -1,9 +1,11 @@
 @charset "utf-8";
-
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 /* 초기화 */
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Gowun Dodum', sans-serif;
+
 }
 
 ul,li{
@@ -54,53 +56,69 @@ header nav{
 }
 
 .banner{
-    background-image: url(./img/bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: white;
     height: 650px;
+    position: relative;
+    background-image: url(./img/bg2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -190px;
 }
 
 .banner .textBox{
     position: absolute;
     top: 50%;
     left: 10%;
-    transform: translate((-50%, -50%));
+    transform: translateY(-50%);
+    color: white;
+}
+
+.banner .textBox p{
+    font-size: 20px;
+}
+
+.banner .textBox h1{
+    font-size: 40px;
 }
 
 .back{
     background-color: white;
-    height: 100px;
+    height: 300px;
 }
+
 /* section */
 section{
     background-color: white;
 }
 
-.box{
-    background-color: white;
+section table{
     width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
     margin: 0 auto;
 }
 
-.box .innerBox1{
-    width: 50%;
-    height: 300px;
-    margin-right: 10px;
+
+section table tr td{
+    width: 500px;
+    height: 500px;
+    border-bottom: 100px solid transparent;
+
 }
 
-.box .innerBox2{
-    width: 50%;
-    height: 300px;
-    line-height: 300px;
-    padding-left: 40px;
+section table tr td hr{
+    background-color: black;
+    height: 5px;
+    width: 50px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.box img:hover{
+/* section table tr td img{
     transition-duration: 1s;
-    margin-top: -10px;
-    cursor: pointer;
 }
+
+section table tr td img:hover{
+    margin-top: -20px;
+    cursor: pointer;
+} */
