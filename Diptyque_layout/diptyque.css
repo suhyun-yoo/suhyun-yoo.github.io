@@ -1,0 +1,130 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@700&display=swap');
+
+/* 초기화 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+ul, li{
+    list-style: none;
+}
+
+/* header */
+header{
+    z-index: 11;
+    position: relative;
+}
+
+nav{
+    background-color: rgb(0, 0, 0);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    height: 100%;
+    margin-left: 50px;
+    box-sizing: border-box;
+}
+
+nav ul li{
+    height: 100%;
+    width: 100px;
+    color: white;
+    float: left;
+    line-height: 100px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.logo{
+    height: 100%;
+}
+
+.logo h1{
+    color: white;
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 2.5rem;
+}
+
+.iconBox{
+    height: 100%;
+    width: 200px;
+    line-height: 100px;
+    text-align: center;
+}
+
+.iconBox svg{
+    cursor: pointer;
+}
+
+/* banner */
+.banner{
+    height: 680px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* section */
+section{
+    height: 400px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+section h2{
+    margin-left: 50px;
+}
+
+section .best{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -15px;
+}
+
+section .innerbox{
+    height: 50%;
+    width: calc(25% - 15px);
+    margin-right: 15px;
+    cursor: pointer;
+
+    position: relative;
+}
+
+section .innerbox .icon{
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    position: absolute;
+    top: 10%;
+    right: 15%;
+
+    color: red;
+}
+
+.bestText{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-right: -15px;
+
+    font-size: 0.812rem;
+}
+
+.bestText p{
+    margin-right: 15px;
+}
