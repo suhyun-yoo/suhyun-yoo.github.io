@@ -1,0 +1,357 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&family=Open+Sans:wght@300&display=swap');
+
+/* ---------- 초기화 ----------- */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button{
+    border: none;
+    background: transparent;
+}
+
+ul, li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ---------- 로그인 버튼 고정 ---------- */
+.login{
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1;
+}
+
+.loginBtn{
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    width: 70px;
+    height: 40px;
+}
+
+.loginBtn:hover{
+    background-color: white;
+    color: black;
+}
+
+/* ---------- header ---------- */
+header{
+    height: 500px;
+    background-image: url(./img/header-background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    margin-bottom: -1px;
+    position: relative;
+}
+
+.header-txt img{
+    width: 200px;
+    height: 200px;
+    margin-bottom: -50px;
+}
+
+.header-txt{
+    width: 60%;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+
+    transform: translateY(-50%);
+}
+
+.header-txt h1{
+    margin-bottom: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.header-txt span{
+    font-size: 0.812rem;
+}
+
+.header-txt input{
+    background-color: rgb(68, 68, 68);
+    color: lightgrey;
+    border: none;
+    height: 30px;
+    margin-right: -6px;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+.header-txt button{
+    background-color: #0063e5;
+    border: none;
+    color: white;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+
+    transform: translateY(1px);
+}
+
+.header-txt p{
+    font-size: 0.625rem;
+}
+
+.back{
+    background-color: black;
+    height: 100px;
+}
+
+/* ---------- section ---------- */
+section{
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+}
+
+/* box1 */
+.box1{
+    width: 80%;
+}
+
+.box1 table{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.box1 table th, 
+.box1 table td {
+    border-left: 1px solid #444444;
+    padding: 10px;
+  }
+
+.box1 table th:first-child, 
+.box1 table td:first-child {
+border-left: none;
+}
+
+.box1 table th{
+    font-size: 15px;
+}
+
+.box1 table td{
+    font-size: 10px;
+}
+
+/* box2 */
+.box2{
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.box2 .txtBox{
+    width: 80%;
+    margin-top: 160px;
+}
+
+.txtBox h3{
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.txtBox p{
+    font-size: 0.625rem;
+}
+
+.box2 .imgBox{
+    width: 70%;
+}
+
+.imgBox img{
+    object-fit: contain;
+}
+
+.imgBox img:hover{
+    transform: scale(1.1, 1.1);
+    transition: transform.5s;
+}
+
+/* box3 */
+.box3{
+    text-align: center;
+}
+
+.box3 h3{
+    font-size: 20px;
+}
+
+.box3 p{
+    font-size: 0.625rem;
+    margin-bottom: 30px;
+}
+
+.inbox-1{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.inbox{
+    display: flex;
+    margin-right: -10px;
+    margin-bottom: 10px
+}
+
+.inbox img{
+    width: calc(33.333% - 10px);
+    margin-right: 10px;
+    opacity: 0.7;
+}
+
+.inbox img:hover{
+    opacity: 1;
+    transform: scale(0.8, 0.8);
+    transition: transform.4s;
+}
+
+/* box4 */
+.box4 table{
+    margin: 0 auto;
+    width: 90%;
+    text-align: left;
+}
+
+.box4 table .head{
+    font-size: 0.812rem;
+    border-bottom: 10px solid black;
+}
+
+.box4 table td{
+    font-size: 0.562rem;
+}
+
+.box4 table .head,
+.box4 table td{
+    border-right: 30px solid black;
+}
+
+.box14 table .head:last-child, 
+.box4 table td:last-child {
+border-right: none;
+}
+
+/* box5 */
+.box5{
+    text-align: center;
+}
+
+.box5 h3{
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.box5 p{
+    font-size: 0.625rem;
+    margin-bottom: 30px;
+}
+
+.box5 table{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.box5 table td{
+    vertical-align : top;
+    border-bottom: 10px solid black;
+}
+
+.box5 table td p{
+    margin-bottom: 0;
+}
+
+/* box6 */
+/* .box6 ul{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.box6 ul li{
+    font-size: 0.812rem;
+    text-align: left;
+    height: 50px;
+    line-height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box6 button{
+    color: white;
+    cursor: pointer;
+    font-size: 25px;
+} */
+
+.box6 details{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.box6 details:last-child,
+.box6 details p:last-child{
+    margin-bottom: 0;
+}
+
+.box6 details p{
+    margin-left: 30px;
+    margin-top: 10px;
+    font-size: 0.625rem;
+    line-height: 20px;
+}
+
+.box6 summary{
+    cursor: pointer;
+}
+
+
+
+
+/* ---------- footer ---------- */
+footer{
+    background-color: black;
+    text-align: center;
+    font-size: 0.625rem;
+    color: white;
+}
+
+footer img{
+    width: 100px;
+    height: 100px;
+}
+
+footer a{
+    margin-right: 15px;
+}
+
+footer a:last-child{
+    margin-right: 0;
+}
+
+footer .text-box{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
