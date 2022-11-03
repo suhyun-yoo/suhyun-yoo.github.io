@@ -18,6 +18,11 @@ img{
     object-fit: cover;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 /* body */
 body{
     background-color: rgb(232, 254, 235);
@@ -48,11 +53,13 @@ header nav{
     margin-right: 30px;
     cursor: pointer;
     transition-duration: 0.7s;
+    box-sizing: border-box;
 }
 
 .menu ul li:hover{
     border-bottom: 5px solid black;
     margin-top: -10px;
+    box-sizing: border-box;
 }
 
 .banner{
@@ -95,6 +102,7 @@ section table{
     width: 90%;
     text-align: center;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 
@@ -102,7 +110,6 @@ section table tr td{
     width: 500px;
     height: 500px;
     border-bottom: 100px solid transparent;
-
 }
 
 section table tr td hr{
@@ -112,6 +119,7 @@ section table tr td hr{
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 /* section table tr td img{
@@ -122,3 +130,31 @@ section table tr td img:hover{
     margin-top: -20px;
     cursor: pointer;
 } */
+
+/* footer */
+footer{
+    /* border-top: 1px solid lightgrey; */
+    background-color: white;
+    height: 100px;
+
+    position: relative;
+}
+
+.logo-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 300px;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo-wrap img{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    box-sizing: border-box;
+    opacity: 0.7;
+}
