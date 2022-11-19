@@ -46,6 +46,13 @@ nav ul li{
     line-height: 100px;
     cursor: pointer;
     text-align: center;
+
+    transition: 0.3s;
+}
+
+nav ul li:hover{
+    border-bottom: 10px solid white;
+    margin-top: -10px;
 }
 
 .logo{
