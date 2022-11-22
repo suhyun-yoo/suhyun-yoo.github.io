@@ -98,8 +98,8 @@ header nav h1{
     border: 1px solid black;
     /* background-color: gray; */
     padding: 10px;
-    height: 250px;
-    width: 90%;
+    height: 400px;
+    width: 1000px;
     margin: auto;
     margin-top: 20px;
     box-sizing: border-box;
@@ -111,26 +111,22 @@ header nav h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
     position: absolute;
     top: 0;
 
-
     height: 100%;
-    width: 1200px;
+    width: 1600px;
 }
 
 .slide-item{
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-right: 10px solid transparent;
     box-sizing: border-box;
 
     position: relative;
 }
-
-/* .slide-item img{
-    border: 1px solid lightgray;
-} */
 
 .slide-item p{
     font-size: 0.7rem;
@@ -150,22 +146,23 @@ header nav h1{
     display: inline-block;
     width: 10px;
     height: 10px;
-    /* background-color: black; */
+    background-color: lightgray;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.2s;
 }
 
 input[id="tab1"]:checked ~ .slide-btn label[for="tab1"],
-input[id="tab2"]:checked ~ .slide-btn label[for="tab2"],
-input[id="tab3"]:checked ~ .slide-btn label[for="tab3"],
-input[id="tab4"]:checked ~ .slide-btn label[for="tab4"],
-input[id="tab5"]:checked ~ .slide-btn label[for="tab5"],
-input[id="tab6"]:checked ~ .slide-btn label[for="tab6"],
-input[id="tab7"]:checked ~ .slide-btn label[for="tab7"],
-input[id="tab8"]:checked ~ .slide-btn label[for="tab8"]{
-    /* background-color: lightgray; */
+input[id="tab2"]:checked ~ .slide-btn label[for="tab2"]{
+    background-color: black;
     width: 15px;
+}
+
+input[id="tab1"]:checked ~ .bestseller-slide{
+    left: 0;
+}
+input[id="tab2"]:checked ~ .bestseller-slide{
+    left: -60%;
 }
 
 /* ===== like btn svg  ===== */
