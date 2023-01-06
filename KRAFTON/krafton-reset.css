@@ -14,8 +14,14 @@ a{
     text-decoration: none;
     color: inherit;
 }
-img{
+img,
+svg{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+html,
+body{
+    transition: 0.3s;
 }

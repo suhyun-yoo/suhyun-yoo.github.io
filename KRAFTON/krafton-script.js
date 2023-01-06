@@ -44,4 +44,21 @@ $(document).ready(function(){
             prevEl: ".swiper-button-prev",
             },
       });
+
+    // scroll-btn 클릭 시, 하단 wrap 영역으로 이동하기
+    $('.scroll-btn').click(function(){
+        $('html, body').animate({ scrollTop : 625 }, 1000)
+    });
+
+    // window.scrollTop 값이 이면, body 배경색상 변경하기
+    $(window).scroll(function(){
+        let srt = $(window).scrollTop();
+        if(srt > 1100 && srt < 1500){
+            $('html, body').css({ backgroundColor : 'black'});
+            $('.games .title').css({ color : 'white'});
+        } else {
+            $('html, body').css({ backgroundColor : 'white'});
+            $('.games .title').css({ color : 'black'});
+        }
+    });
 })
