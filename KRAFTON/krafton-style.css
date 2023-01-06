@@ -3,13 +3,23 @@
 /* ==== header 영역 ==== */
 header{
     width: 90%;
-    margin: 0 auto;
     height: 100px;
     padding: 0 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99999;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+header.active{
+    height: 80px;
+}
+header.active .logo{
+    line-height: 80px;
 }
 header .logo{
     height: 100%;
@@ -32,6 +42,9 @@ header nav ul li{
     font-size: 1.2rem;
     float: left;
 }
+header.active nav ul li{
+    font-size: 1rem;
+}
 header nav ul li:nth-child(4){
     width: 140px;
 }
@@ -51,7 +64,7 @@ header .lang{
 header .lang li{
     width: 35px;
     border-right: 1px solid lightgray;
-    color: lightgray;
+    color: rgb(156, 156, 156);
     transition: 0.3s;
     cursor: pointer;
 }
@@ -80,7 +93,7 @@ header .lang li.active{
     background-color: white;
     padding: 0 30px 0 100px;
 
-    position: absolute;
+    position: sticky;
     top: 100px;
     left: 0;
     z-index: 9999;
@@ -221,7 +234,7 @@ header .lang li.active{
 
 /* wrap-box1 */
 .wrap .wrap-box1{
-    margin-top: -100px;
+    margin-top: 100px;
 }
 .wrap .wrap-box1 .inner-box{
     width: 800px;

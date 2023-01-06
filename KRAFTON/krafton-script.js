@@ -1,4 +1,13 @@
 $(document).ready(function(){
+    // scroll 발생 시, header 영역에 active 클래스 추가
+    $(window).scroll(function(){
+        if($(window).scrollTop() > 0){
+            $('header').addClass('active');
+        } else{
+            $('header').removeClass('active');
+        }
+    })
+
     // 언어 선택 버튼 클릭 시, 해당 버튼에 active 클래스 추가하고, 형제들에게는 제거하기
     $('header .lang li').click(function(){
         $(this).addClass('active');
@@ -47,18 +56,61 @@ $(document).ready(function(){
 
     // scroll-btn 클릭 시, 하단 wrap 영역으로 이동하기
     $('.scroll-btn').click(function(){
-        $('html, body').animate({ scrollTop : 625 }, 1000)
+        $('html, body').animate({ scrollTop : 500 }, 1000)
     });
 
-    // window.scrollTop 값이 이면, body 배경색상 변경하기
+    // window.scrollTop 값이 이면, body 배경색상 변경 및 header 색상 변경
     $(window).scroll(function(){
         let srt = $(window).scrollTop();
         if(srt > 1100 && srt < 1500){
             $('html, body').css({ backgroundColor : 'black'});
             $('.games .title').css({ color : 'white'});
+            $('header').css({ 
+                backgroundColor : 'black',
+                color : 'white'
+            });
+            $('header .lang .active').css({ color : 'white'});
+            $('.top-btn').css({ 
+                border : '1px solid white',
+                color : 'white'
+            });
+            $('.top-btn').mouseenter(function(){
+                $(this).css({
+                    color : 'black',
+                    backgroundColor : 'white'
+                })
+            });
+            $('.top-btn').mouseleave(function(){
+                $(this).css({
+                    color : 'white',
+                    backgroundColor : 'transparent'
+                })
+            });
         } else {
             $('html, body').css({ backgroundColor : 'white'});
             $('.games .title').css({ color : 'black'});
+            $('header').css({ 
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                color : 'black'
+            });
+            $('header .lang li.active').css({ color : 'black'});
+
+            $('.top-btn').css({
+                color : 'black',
+                border : '1px solid black',
+            })
+            $('.top-btn').mouseenter(function(){
+                $(this).css({
+                    color : 'white',
+                    backgroundColor : 'black'
+                })
+            });
+            $('.top-btn').mouseleave(function(){
+                $(this).css({
+                    color : 'black',
+                    backgroundColor : 'transparent'
+                })
+            });
         }
     });
 })
