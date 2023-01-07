@@ -46,7 +46,7 @@ $(document).ready(function(){
             autoplay : true,
             loop : true,
             slidesPerView: 2,
-            spaceBetween: 10,
+            spaceBetween: 30,
             centeredSlides: true,
             navigation: {
             nextEl: ".swiper-button-next",
@@ -56,13 +56,13 @@ $(document).ready(function(){
 
     // scroll-btn 클릭 시, 하단 wrap 영역으로 이동하기
     $('.scroll-btn').click(function(){
-        $('html, body').animate({ scrollTop : 500 }, 1000)
+        $('html, body').animate({ scrollTop : 600 }, 1000)
     });
 
     // window.scrollTop 값이 이면, body 배경색상 변경 및 header 색상 변경
     $(window).scroll(function(){
         let srt = $(window).scrollTop();
-        if(srt > 1100 && srt < 1500){
+        if(srt > 1000 && srt < 1500){
             $('html, body').css({ backgroundColor : 'black'});
             $('.games .title').css({ color : 'white'});
             $('header').css({ 
@@ -112,5 +112,19 @@ $(document).ready(function(){
                 })
             });
         }
+    });
+
+    // studio inner-box 영역에 마우스 호버 시, 스타일 변경
+    $('.studios .studios-wrap .inner-box').mouseenter(function(){
+        $(this).children('.logo-box').hide();
+        $(this).children('.logo-box.logo-w').show();
+        $(this).children('hr').css({ border : '1px solid white'});
+        $(this).children('h4, p').css({ color : 'white'});
+    });
+    $('.studios .studios-wrap .inner-box').mouseleave(function(){
+        $(this).children('.logo-box').show();
+        $(this).children('.logo-box.logo-w').hide();
+        $(this).children('hr').css({ border : '1px solid black'});
+        $(this).children('h4, p').css({ color : 'black'});
     });
 })
