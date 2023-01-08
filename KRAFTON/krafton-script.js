@@ -131,4 +131,17 @@ $(document).ready(function(){
         $(this).children('hr').css({ border : '1px solid black'});
         $(this).children('h4, p').css({ color : 'black'});
     });
-})
+
+    // footer 영역 select-box-btn 클릭 시, btn 스타일 변경
+    $('footer .footer-wrap .footer-body .footer-body-right .select-box .select-box-btn').click(function(){
+        $(this).toggleClass('active');
+
+        if($(this).hasClass('active')){
+            $('.options').addClass('open');
+            $('.options').removeClass('close');
+        } else{
+            $('.options').removeClass('open');
+            $('.options').addClass('close');
+        }
+    });
+});
