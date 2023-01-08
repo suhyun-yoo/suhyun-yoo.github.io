@@ -6,7 +6,7 @@ $(document).ready(function(){
         } else{
             $('header').removeClass('active');
         }
-    })
+    });
 
     // 언어 선택 버튼 클릭 시, 해당 버튼에 active 클래스 추가하고, 형제들에게는 제거하기
     $('header .lang li').click(function(){
@@ -56,13 +56,17 @@ $(document).ready(function(){
 
     // scroll-btn 클릭 시, 하단 wrap 영역으로 이동하기
     $('.scroll-btn').click(function(){
-        $('html, body').animate({ scrollTop : 600 }, 1000)
+        const wrap = $('.news-wrap').offset();
+        console.log(`############# ${wrap.top}`);
+        $('html, body').animate({ scrollTop : wrap.top-200 }, 1000)
     });
 
     // window.scrollTop 값이 이면, body 배경색상 변경 및 header 색상 변경
     $(window).scroll(function(){
+        const games = $('.games').offset();
+        console.log(`games.top : ${games.top}`);
         let srt = $(window).scrollTop();
-        if(srt > 1000 && srt < 1500){
+        if(srt > games.top-500 && srt < games.top+200){
             $('html, body').css({ backgroundColor : 'black'});
             $('.games .title').css({ color : 'white'});
             $('header').css({ 
