@@ -10,8 +10,8 @@
   <li>
     <h3> KRAFTON </h3>
     <div>
-      <!-- ![KRAFTON](https://user-images.githubusercontent.com/109067637/211285143-43125261-2172-4bc7-9327-e261010a5187.png) -->
-      <img src='https://user-images.githubusercontent.com/109067637/211285143-43125261-2172-4bc7-9327-e261010a5187.png' alt='KRAFTON'>
+      <!-- ![KRAFTON](https://user-images.githubusercontent.com/109067637/211285929-912450c7-c843-47c7-8802-8a64211ec3d5.png) -->
+      <img src='https://user-images.githubusercontent.com/109067637/211285929-912450c7-c843-47c7-8802-8a64211ec3d5.png' alt='KRAFTON'>
     </div>
   </li>
 </ul>
