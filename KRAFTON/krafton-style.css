@@ -449,7 +449,7 @@ header .lang li.active{
     width: 90%;
     height: 50vh;
     margin: 100px auto;
-    margin-bottom: 150px;
+    margin-bottom: 200px;
 }
 
 .studios .studios-wrap{
@@ -542,7 +542,7 @@ footer .footer-wrap .footer-head ul li{
 }
 footer .footer-wrap .footer-head ul:nth-child(1) li{
     width: 25%;
-    font-size: 13px;
+    font-size: 12px;
     text-align: center;
 }
 footer .footer-wrap .footer-head ul:nth-child(1) li:hover a{
@@ -594,20 +594,29 @@ footer .footer-wrap .footer-body .footer-body-right .select-option-box{
     height: 302px;
     position: absolute;
     top: -220px;
-    
     overflow: hidden;
 }
 footer .footer-wrap .footer-body .footer-body-right .select-option-box .options{
     background-color: black;
     border: 1px solid white;
+    transform: translateY(302px);
 }
 footer .footer-wrap .footer-body .footer-body-right .select-option-box .options.open{
-    animation: optionSlide 0.7s linear both;
+    animation: optionSlideOpen 0.7s linear both;
 }
 footer .footer-wrap .footer-body .footer-body-right .select-option-box .options.close{
-    animation: optionSlide 0.7s linear both reverse;
+    animation: optionSlideClose 0.7s linear both;
 }
-@keyframes optionSlide{
+@keyframes optionSlideClose{
+    0%{
+        transform: translateY(0);
+
+    }
+    100%{
+        transform: translateY(302px);
+    }
+}
+@keyframes optionSlideOpen{
     0%{
         transform: translateY(302px);
 
@@ -620,6 +629,7 @@ footer .footer-wrap .footer-body .footer-body-right .select-option-box .options 
     width: 100%;
     height: 30px;
     padding: 3px;
+    cursor: pointer;
 }
 
 footer .footer-wrap .footer-body .footer-body-right .select-box{
