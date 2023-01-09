@@ -42,16 +42,16 @@ $(document).ready(function(){
     });
 
     // swiper 슬라이드
-        var swiper = new Swiper(".mySwiper", {
-            autoplay : true,
-            loop : true,
-            slidesPerView: 2,
-            spaceBetween: 30,
-            centeredSlides: true,
-            navigation: {
+    var swiper = new Swiper(".mySwiper", {
+        autoplay : true,
+        loop : true,
+        slidesPerView: 2,
+        spaceBetween: 30,
+        centeredSlides: true,
+        navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
-            },
+        },
       });
 
     // scroll-btn 클릭 시, 하단 wrap 영역으로 이동하기
