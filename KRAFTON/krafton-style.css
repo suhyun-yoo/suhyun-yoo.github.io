@@ -533,7 +533,7 @@ footer .footer-wrap .footer-head ul{
     clear: both;
 }
 footer .footer-wrap .footer-head ul:nth-child(1){
-    width: 40%;
+    width: 50%;
 }
 footer .footer-wrap .footer-head ul li{
     height: 100%;
@@ -665,4 +665,47 @@ footer .footer-wrap .footer-body .footer-body-right .select-box .select-box-btn 
 }
 footer .footer-wrap .footer-body .footer-body-right .select-box .select-box-btn span:nth-child(1){
     transform: rotate(90deg);
+}
+
+/* ==== 반응형 스타일링 ==== */
+@media (max-width : 1345px) {
+    .wrap .wrap-box4 .txtBox{
+        width: 300px;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width : 1300px) {
+    .wrap .wrap-box .txt h2{
+        font-size: 3.5rem;
+    }
+
+    .wrap .wrap-box .inner-box{
+        height: 50px;
+    }
+}
+@media (max-width : 1230px) {
+    header .logo h1{
+        font-size: 1.8rem;
+    }
+
+    header nav ul{
+        width: 800px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header nav ul li{
+        width: 80px;
+        height: 100px;
+        font-size: 1rem;
+    }
+    
+}
+
+@media (max-width : 1200px) {
+    .wrap .wrap-box .txt h2,
+    .wrap .wrap-box .txt .box{
+        height: 70px;
+    }
 }
