@@ -3,15 +3,15 @@
 <ul>
   <li>
     <h3> Disney+ </h3>
-    <div>
-      ![Disney+](https://user-images.githubusercontent.com/109067637/211283735-1af663e3-0764-4315-a5b1-5444af20efcd.png)
-    </div>
+     <!-- ![Disney+](https://user-images.githubusercontent.com/109067637/211283735-1af663e3-0764-4315-a5b1-5444af20efcd.png) -->
+    <img src='https://user-images.githubusercontent.com/109067637/211283735-1af663e3-0764-4315-a5b1-5444af20efcd.png' alt='Disney+'>
   </li>
   
   <li>
     <h3> KRAFTON </h3>
     <div>
-      ![KRAFTON](https://user-images.githubusercontent.com/109067637/211285143-43125261-2172-4bc7-9327-e261010a5187.png)
+      <!-- ![KRAFTON](https://user-images.githubusercontent.com/109067637/211285143-43125261-2172-4bc7-9327-e261010a5187.png) -->
+      <img src='https://user-images.githubusercontent.com/109067637/211285143-43125261-2172-4bc7-9327-e261010a5187.png' alt='KRAFTON'>
     </div>
   </li>
 </ul>
