@@ -42,7 +42,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.banner header.actove .logo svg{
+.banner header.active .logo svg{
     fill: #000;
 }
 
