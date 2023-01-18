@@ -15,11 +15,11 @@
     </div>
   </li>
   
-    <li>
+  <li>
     <h3> Lemaire </h3>
     <div>
       <!-- ![Lemaire](https://user-images.githubusercontent.com/109067637/213100965-2de9e949-273a-4740-bc42-f5f128fb79ee.png) -->
-      <img src='https://user-images.githubusercontent.com/109067637/213100965-2de9e949-273a-4740-bc42-f5f128fb79ee.png' alt='Lemaire'>
+      <img src='https://user-images.githubusercontent.com/109067637/213100965-2de9e949-273a-4740-bc42-f5f128fb79ee.png' alt='Lemaire' style="width:100%">
     </div>
   </li>
 </ul>
