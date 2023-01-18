@@ -1,10 +1,26 @@
 @charset "utf-8";
 
+#hamburger{
+    display: none;
+}
+
+/* #wrap{
+
+} */
+
+/* 전체 container 공통 스타일링 지정 */
+.container{
+    height: 100vh;
+}
+
 /* ==== banner 영역 ==== */
 .banner{
     position: relative;
-    width: 100%;
-    height: 100vh;
+}
+.banner video{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .banner header{
     width: 100%;
@@ -12,50 +28,151 @@
     color: white;
     z-index: 99;
     position: fixed;
-    top: 0;
-    left: 0;
+    font-size: 0.75rem;
+    text-transform: uppercase;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 24px 32px;
+    transition: 0.3s;
 }
 .banner header.active{
-    color: black;
+    color: #262320;
 }
 .banner header .menu-left,
 .banner header .menu-right{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-right: 0;
 }
 .banner header .menu-left li,
 .banner header .menu-right li{
-    font-size: 0.75rem;
-    margin-right: 10px;
+    margin-right: 24px;
+    letter-spacing: 2px;
+    opacity: 0.5;
+    transition: 0.3s;
 }
-.banner header .logo svg{
-    width: 100px;
-    height: 80px;
-    fill: white;
+.banner header .menu-left li:hover,
+.banner header .menu-right li:hover{
+    opacity: 1;
+}
+/* header 중앙 로고 영역 */
+.banner header .logo{
+    width: 200px;
+    height: 32px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.banner header .logo svg{
+    fill: white;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+.banner header .logo:hover svg{
+    opacity: 1;
 }
 .banner header.active .logo svg{
-    fill: #000;
+    width: 164px;
+    height: 24px;
+    fill: #262320;
+}
+
+/* ==== sub-menu-box 영역 ==== */
+/* 하나씩 가려서 확인하기 */
+#tab1, #tab2, #tab3{
+    display: none;
+}
+.sub-menu-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    transition: 0.5s;
+    z-index: -1;
+    /* opacity: 0; */
+}
+.sub-menu-box.active{
+    opacity: 1;
+    z-index: 99;
+}
+.sub-menu-box .sub-menu{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+
+    /* (1230/1920) * 100 = 64.0625 */
+    width: 64vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    /* opacity: 0; */
+    transition: 0.3s;
+}
+.sub-menu-box .sub-menu.active{
+    opacity: 1;
+}
+.sub-menu-box .sub-menu .menu-left{
+    height: 277px;
+}
+.sub-menu-box .sub-menu .menu-left .sub-menu-detail{
+    margin-right: 50px;
+}
+.sub-menu-box .sub-menu .menu-left .sub-menu-detail .sub-menu-head{
+    font-size: 0.8rem;
+    color: rgba(0,0,0,0.8);
+}
+.sub-menu-box .sub-menu .menu-left .sub-menu-detail .sub-menu-body{
+    font-size: 0.8rem;
+    color: #a8a8a8;
+    margin-top: 8px;
+}
+.sub-menu-box .women .menu-left,
+.sub-menu-box .men .menu-left{
+    width: calc(100% - 11vw);
+    display: flex;
+    margin-right: 11vw;
+}
+.sub-menu-box .women .sub-menu-detail,
+.sub-menu-box .men .sub-menu-detail{
+    width: 33.333%;
+}
+
+.sub-menu-box .photo img{
+    object-position: center top;
+}
+.sub-menu-box .women .photo,
+.sub-menu-box .men .photo{
+    width: 236px;
+    height: 277px;
+}
+
+/* #tab3  */
+.sub-menu-box .collections .photo{
+    width: 472px;
+    height: 277px;
+}
+.sub-menu-box .collections .sub-menu-detail{
+    margin-bottom: 8px;
+}
+/* #tab4 */
+.sub-menu-box .about .photo{
+    width: 300px;
+    height: 221px;
+}
+.sub-menu-box .about .sub-menu-detail p{
+    margin-top: 12px;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 /* ==== sec1 영역 ==== */
-.sec1,
-.sec2,
-.sec3,
-.sec4,
-.sec5{
-    width: 100%;
-    height: 100vh;
-}
-
 .sec1{
     background: url(../img/sec-1-bg.jpg) no-repeat center center;
 }
