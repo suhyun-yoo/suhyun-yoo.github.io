@@ -14,4 +14,12 @@
       <img src='https://user-images.githubusercontent.com/109067637/211285929-912450c7-c843-47c7-8802-8a64211ec3d5.png' alt='KRAFTON'>
     </div>
   </li>
+  
+    <li>
+    <h3> Lemaire </h3>
+    <div>
+      <!-- ![Lemaire](https://user-images.githubusercontent.com/109067637/213100965-2de9e949-273a-4740-bc42-f5f128fb79ee.png) -->
+      <img src='https://user-images.githubusercontent.com/109067637/213100965-2de9e949-273a-4740-bc42-f5f128fb79ee.png' alt='Lemaire'>
+    </div>
+  </li>
 </ul>
