@@ -1,23 +1,50 @@
 @charset "utf-8";
+/* 풀페이지 css 연결 */
+@import url(https://cdn.jsdelivr.net/npm/fullpage.js@2.9.4/dist/jquery.fullpage.min.js);
+
+/* 로컬 폰트 연결 */
 @font-face {
     font-family: 'Silk Serif';
+    src: url('../fonts/silk-serif/Silk-Serif-Black.otf') format('otf');
+    src: url('../fonts/silk-serif/Silk-Serif-Bold.otf') format('otf');
+    src: url('../fonts/silk-serif/Silk-Serif-SemiBold.otf') format('otf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Silk Serif';
+    src: url('../fonts/silk-serif/Silk-Serif-Light.otf') format('otf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Silk Serif';
+    src: url('../fonts/silk-serif/Silk-Serif-Medium.otf') format('otf');
     src: url('../fonts/silk-serif/Silk-Serif-Regular.otf') format('otf');
-    font-weight: normal;
-    font-style: normal;
+    font-weight: 400;
 }
 @font-face {
     font-family: 'BrownStd';
     src: url('../fonts/BrownStd/BrownStd-Regular/BrownStd-Regular.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard/Pretendard-Light.otf') format('otf');
+    src: url('../fonts/Pretendard/Pretendard-Thin.otf') format('otf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard/Pretendard-Bold.otf') format('otf');
+    src: url('../fonts/Pretendard/Pretendard-SemiBold.otf') format('otf');
+    font-weight: 700;
 }
 @font-face {
     font-family: 'Pretendard';
     src: url('../fonts/Pretendard/Pretendard-Regular.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
+    src: url('../fonts/Pretendard/Pretendard-Medium.otf') format('otf');
+    font-weight: 400;
 }
 
+/* 전체 초기화 */
 *{
     margin: 0;
     padding: 0;
@@ -27,11 +54,19 @@ ul,li{
     list-style: none;
 }
 a{
+    display: block;
     text-decoration: none;
     color: inherit;
 }
-img, video{
+img, svg, video, iframe{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+html, body{
+    /* 가장 많이 들어가는 폰트를 미리 기본값으로 지정 */
+    font-family: 'BrownStd';
+    font-size: 100%;
+    /* overflow-x: hidden; */
 }
