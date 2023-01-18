@@ -13,15 +13,29 @@
 </head>
 <body>
     <div id="wrap">
-        <div class="banner section">
-            <video src="./video/lemaire_2023_SS.mp4" loop muted autoplay></video>
+
+        <!-- banner 영역 -->
+        <section class="banner section">
+            <!-- data-keeping : 풀페이지로 페이지가 이동해도 멈추지 않고 재생되도록 설정 -->
+            <video src="./video/lemaire_2023_SS.mp4" loop muted autoplay playsinline data-keeping></video>
+
             <header>
+                <!-- 모바일 햄버거버튼 -->
+                <a href="#none" id="hamburger">
+                    <span></span>
+                    <span></span>
+                </a>
+
+                <!-- 좌측 메뉴 영역 -->
+                <!-- 메뉴 클릭 시, 탭에 맞는 형식으로 서브메뉴가 나타나기 때문에 data-alt라는 속성을 추가하여 각각 다른 속성값을 넣음 -->
                 <ul class="menu-left">
-                    <li><a href="#none">WOMEN</a></li>
-                    <li><a href="#none">MEN</a></li>
-                    <li><a href="#none">COLLECTIONS</a></li>
-                    <li><a href="#none">ABOUT</a></li>
+                    <li data-alt="tab1"><a href="#none">WOMEN</a></li>
+                    <li data-alt="tab2"><a href="#none">MEN</a></li>
+                    <li data-alt="tab3"><a href="#none">COLLECTIONS</a></li>
+                    <li data-alt="tab4"><a href="#none">ABOUT</a></li>
                 </ul>
+
+                <!-- 중앙 로고 영역 -->
                 <div class="logo">
                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410.000000 62.000000" preserveAspectRatio="xMidYMid meet">
                     <g transform="translate(0.000000,62.000000) scale(0.100000,-0.100000)"
@@ -52,42 +66,272 @@
                     </g>
                     </svg>
                 </div>
+
+                <!-- 우측 메뉴 영역 -->
                 <ul class="menu-right">
                     <li><a href='#none'>SEARCH</a></li>
                     <li><a href='#none'>ACCOUNT</a></li>
                 </ul>
             </header>
-        </div>
 
-        <div class="sec1 section">
-        </div>
+            <!-- 서브메뉴 영역 -->
+            <div class="sub-menu-box">
+                <ul id="tab1" class="sub-menu women">
+                    <li class="menu-left">
+                        <a class="sub-menu-detail" href="#none">
+                            <ul class="sub-menu-head">
+                                HIGHLIGHTS
+                                <li class="sub-menu-body">NEW ARRIVALS</li>
+                                <li class="sub-menu-body">RUNWAY SPRING - SUMMER 2023</li>
+                                <li class="sub-menu-body">SS22 : SANDALS</li>
+                                <li class="sub-menu-body">SS22 : THE MARBLED PRINT</li>
+                                <li class="sub-menu-body">DENIM FOR SUMMER</li>
+                            </ul>
+                        </a>
+                        <a class="sub-menu-detail" href="#none">
+                            <ul class="sub-menu-head">
+                                READY-TO-WEAR
+                                <li class="sub-menu-body">COATS AND JACKETS</li>
+                                <li class="sub-menu-body">DRESSES</li>
+                                <li class="sub-menu-body">TROUSERS</li>
+                                <li class="sub-menu-body">SKIRTS</li>
+                                <li class="sub-menu-body">TOPS</li>
+                                <li class="sub-menu-body">SHIRTS</li>
+                                <li class="sub-menu-body">KNITWEAR AND JERSEY</li>
+                                <li class="sub-menu-body">DENIM</li>
+                            </ul>
+                        </a>
+                        <a class="sub-menu-detail" href="#none">
+                            <ul class="sub-menu-head">
+                                ACCESSORIES
+                                <li class="sub-menu-body">BAGS</li>
+                                <li class="sub-menu-body">SMALL LEATHER GOODS</li>
+                                <li class="sub-menu-body">SHOES</li>
+                                <li class="sub-menu-body">JEWELLERY</li>
+                                <li class="sub-menu-body">OTHER ACCESSORIES</li>
+                                <li class="sub-menu-body">VIEW ALL</li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li class="menu-right">
+                        <a href="#none" class="photo sub-menu-datail">
+                            <img src="./img/menu01.jpg" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <ul id="tab2" class="sub-menu men">
+                    <li class="menu-left">
+                        <a class="sub-menu-detail" href="#none">
+                            <ul class="sub-menu-head">
+                                HIGHLIGHTS
+                                <li class="sub-menu-body">NEW ARRIVALS</li>
+                                <li class="sub-menu-body">RUNWAY SPRING - SUMMER 2023</li>
+                                <li class="sub-menu-body">SS22 : SANDALS</li>
+                                <li class="sub-menu-body">SS22 : THE MARBLED PRINT</li>
+                                <li class="sub-menu-body">DENIM FOR SUMMER</li>
+                            </ul>
+                        </a>
+                        <a class="sub-menu-detail" href="#none">
+                            <ul class="sub-menu-head">
+                                READY-TO-WEAR
+                                <li class="sub-menu-body">COATS AND JACKETS</li>
+                                <li class="sub-menu-body">DRESSES</li>
+                                <li class="sub-menu-body">TROUSERS</li>
+                                <li class="sub-menu-body">SKIRTS</li>
+                                <li class="sub-menu-body">TOPS</li>
+                                <li class="sub-menu-body">SHIRTS</li>
+                                <li class="sub-menu-body">KNITWEAR AND JERSEY</li>
+                                <li class="sub-menu-body">DENIM</li>
+                            </ul>
+                        </a>
+                        <a class="sub-menu-detail" href="#none">
+                            <ul class="sub-menu-head">
+                                ACCESSORIES
+                                <li class="sub-menu-body">BAGS</li>
+                                <li class="sub-menu-body">SMALL LEATHER GOODS</li>
+                                <li class="sub-menu-body">SHOES</li>
+                                <li class="sub-menu-body">JEWELLERY</li>
+                                <li class="sub-menu-body">OTHER ACCESSORIES</li>
+                                <li class="sub-menu-body">VIEW ALL</li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li class="menu-right">
+                        <a href="#none" class="photo sub-menu-datail">
+                            <img src="./img/menu02.jpg" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <ul id="tab3" class="sub-menu collections">
+                    <li class="menu-left">
+                        <a class="sub-menu-detail" href="#none">
+                            <ul class="sub-menu-head">
+                                SPRING-SUMMER 2023
+                            </ul>
+                        </a>
+                        <a class="sub-menu-detail" href="#none">
+                            <ul class="sub-menu-head">
+                                FALL-WINTER 2022
+                            </ul>
+                        </a>
+                        <a class="sub-menu-detail" href="#none">
+                            <ul class="sub-menu-head">
+                                SPRING-SUMMER 2022
+                            </ul>
+                        </a>
+                    </li>
+                    <li class="menu-right">
+                        <a href="#none" class="photo sub-menu-datail">
+                            <img src="./img/menu03.webp" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <ul id="tab4" class="sub-menu about">
+                    <li class="sub-menu-detail">
+                        <a href="#none" class="photo sub-menu-body">
+                            <img src="./img/menu04-1.webp" alt="">
+                        </a>
+                        <p>LEMAIRE</p>
+                    </li>
+                    <li class="sub-menu-detail">
+                        <a href="#none" class="photo sub-menu-body">
+                            <img src="./img/menu04-2.webp" alt="">
+                        </a>
+                        <p>PORTRAIT</p>
+                    </li>
+                    <li class="sub-menu-detail">
+                        <a href="#none" class="photo sub-menu-body">
+                            <img src="./img/menu04-3.webp" alt="">
+                        </a>
+                        <p>STORES</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-        <div class="sec2 section">
-            <p>La France</p>
-        </div>
+        <!-- section 1 영역 -->
+        <section class="sec1 section">
+            <div class="container">
+                <div class="canvas">
+                    <div class="carousel box1">
+                        <div class="cell">
+                            <img src="./img/carousel01.webp" alt="">
+                        </div>
+                        <div class="cell">
+                            <img src="./img/carousel02.webp" alt="">
+                        </div>
+                        <div class="cell">
+                            <img src="./img/carousel03.webp" alt="">
+                        </div>
+                        <div class="cell">
+                            <img src="./img/carousel04.webp" alt="">
+                        </div>
+                        <div class="cell">
+                            <img src="./img/carousel05.webp" alt="">
+                        </div>
+                        <div class="cell">
+                            <img src="./img/carousel06.webp" alt="">
+                        </div>
+                        <div class="cell">
+                            <img src="./img/carousel07.webp" alt="">
+                        </div>
+                        <div class="cell">
+                            <img src="./img/carousel08.webp" alt="">
+                        </div>
+                        <div class="cell">
+                            <img src="./img/carousel09.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel box2">
+                        <div class="cell">
+                            <img src="./img/carousel01.webp" alt="">
+                        </div>
+                        <div class="cell">
+                            <img src="./img/carousel02.webp" alt="">
+                        </div>
+                        <div class="cell">
+                            <img src="./img/carousel03.webp" alt="">
+                        </div>
+                        <div class="cell">
+                            <img src="./img/carousel04.webp" alt="">
+                        </div>
+                        <div class="cell">
+                            <img src="./img/carousel05.webp" alt="">
+                        </div>
+                        <div class="cell">
+                            <img src="./img/carousel06.webp" alt="">
+                        </div>
+                        <div class="cell">
+                            <img src="./img/carousel07.webp" alt="">
+                        </div>
+                        <div class="cell">
+                            <img src="./img/carousel08.webp" alt="">
+                        </div>
+                        <div class="cell">
+                            <img src="./img/carousel09.webp" alt="">
+                        </div>
+                    </div>
+                </div>
 
-        <div class="sec3 section">
-            <p class="txt1">Grâce au prix de de l’ANDAM dont il sort lauréat en 1991,
-            Christophe Lemaire monte sa marque éponyme et
-            incorpore en 1995 le prêt-à-porter homme à la collection
-            femme.</p>
-            <p class="txt2">Il la met entre parenthèse de 2000 à 2007 durant sa mission de direction artistique chez Lacoste avant de la relancer en 2007 par l’ouverture de la boutique emblématique à l’atmosphère
-            ouatée dans le quartier du Marais à Paris. En 2010, l’arrivée de Sarah-Linh Tran aux côtés de Christophe Lemaire souligne une nouvelle évolution de la griffe. </p>
-            <p class="txt3">chronology</p>
-        </div>
+                <h1 class="sec1-txt">
+                    Pursue Romance in everyday life. Their inspiration always comes from realistic questions like these.
+                </h1>
+            </div>
+        </section>
 
-        <div class="sec4 section">
-            <div class="swiper">
-                <div class="imgBox-1"></div>
-                <div class="imgBox-2"></div>
+        <!-- section 2 영역 -->
+        <section class="sec2 section">
+            <div class="container">
+                <div class="txt">La France</div>
+            </div>
+        </section>
+
+        <!-- section 3 영역 -->
+        <section class="sec3 section">
+            <div class="about-txt-t">
+                Grâce au prix de de l’ANDAM dont il sort lauréat en 1991,
+                Christophe Lemaire monte sa marque éponyme et
+                incorpore en 1995 le prêt-à-porter homme à la collection
+                femme.
+            </div>
+            <div class="about-txt-m">chronology</div>
+            <div class="about-txt-b">
+                Il la met entre parenthèse de 2000 à 2007 durant sa mission de direction artistique chez Lacoste avant de la relancer en 2007 par l’ouverture de la boutique emblématique à l’atmosphère ouatée dans le quartier du Marais à Paris. En 2010, l’arrivée de Sarah-Linh Tran aux côtés de Christophe Lemaire souligne une nouvelle évolution de la griffe. 
+            </div>
+        </section>
+
+        <!-- section 4 영역 -->
+        <section class="sec4 section">
+            <div class="container">
+                <div class="mask swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/ceo01.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/ceo02.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/ceo03.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/ceo04.jpeg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/ceo05.jpeg" alt="">
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
             </div>
 
-            <div class="txtBox">
-                <p class="name name-r">sarah linh tran</p>
-                <p class="and">&</p>
-                <p class="name name-l">chirstophe lemaire</p>
-                <p class="detail">르메르의 역사 속에서 주목할 만한 지점은 협업과 팀워크입니다.
-                그의 파트너이자 뮤즈인 디자이너 사라 린 트란Sarah Linh Tra
+            <div class="ceo-txt">
+                <div class="ceo-head">
+                    <img src="./img/ceo-txt.png" alt="">
+                </div>
+
+                <p class="ceo-body">
+                르메르의 역사 속에서 주목할 만한 지점은 협업과 팀워크입니다. 그의 파트너이자 뮤즈인 디자이너 사라 린 트란Sarah Linh Tra
                 n은 르메르의 스타일에 안정감을 가져다 준 중요한 인물이지요. 
                 그녀는 브랜드의 수장인 크리스토퍼에 비해 패션계에서의 경력
                 은 부족했지만, 남다른 감각과 독특한 분위기로 패션 피플들의 이
@@ -98,12 +342,74 @@
                 신비로운 베일에 가려져 있는 존재 인지라, 우연히 촬영된 사라의
                 사진 속 스타일링을 수집하기 위해 그녀의 이름을 검색하는 많은
                 이들은 그녀가 좀 더 대외적인 활동을 활발히 펼쳐 주길 바라고 
-                있을 정도죠.</p>
+                있을 정도죠.
+                </p>
             </div>
-        </div>
+        </section>
         
-        <div class="sec5 section">
-            <p>stores</p>
+        <!-- section 5 영역 -->
+        <section class="sec5 section">
+            <div class="container">
+                <div class="head-txt">stores</div>
+                <div class="store-gallery">
+                    <div class="store left">
+                        <div class="box1">
+                            <img src="./img/stores01.webp" alt="">
+                        </div>
+                        <div class="box2">
+                            <img src="./img/stores02.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="store right">
+                        <div class="box1">
+                            <img src="./img/stores03.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer 영역 -->
+        <section class="footer">
+            <div class="container">
+                <div class="footer-t">
+                    <div class="box inner-txt1">
+                        <h2>ABOUT</h2>
+                        <p><a href="#none">LEMAIRE</a></p>
+                        <p><a href="#none">Boutiques</a></p>
+                        <p><a href="#none">Contact</a></p>
+                        <p><a href="#none">Carrières</a></p>
+                    </div>
+                    <div class="box inner-txt2">
+                        <h2>AIDE</h2>
+                        <p><a href="#none">Livraison et Retours</a></p>
+                        <p><a href="#none">Service client</a></p>
+                        <p><a href="#none">FAQ</a></p>
+                        <p><a href="#none">Demande de retour</a></p>
+                    </div>
+                    <div class="box inner-txt3">
+                        <h2>RÉSEAUX SOCIAUX</h2>
+                        <p><a href="#none">Instagram</a></p>
+                        <p><a href="#none">Facebook</a></p>
+                        <p><a href="#none">Pinterest</a></p>
+                    </div>
+                    <div class="box inner-txt4">
+                        <h2>LÉGAL</h2>
+                        <p><a href="#none">Terms & Conditions</a></p>
+                        <p><a href="#none">Privacy Policy</a></p>
+                        <p><a href="#none">Legal mentions</a></p>
+                    </div>
+                    <div class="box inner-txt5">NEWSLETTER</div>
+                </div>
+                <div class="footer-b">
+                    <small class="copyright"> © Lemaire </small>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOP 버튼 -->
+        <div class="top-btn">
+            <img src="./img/Lemaire_topbtn-o-black.svg" alt="">
         </div>
     </div>
 
