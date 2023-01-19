@@ -27,6 +27,11 @@ a{
     color: inherit;
 }
 
+html,
+body{
+    background-color: black;
+}
+
 /* ---------- 로그인 버튼 고정 ---------- */
 .login{
     position: fixed;
@@ -42,6 +47,7 @@ a{
     background-color: black;
     width: 70px;
     height: 40px;
+    cursor: pointer;
 }
 
 .loginBtn:hover{
@@ -110,16 +116,10 @@ header{
     font-size: 0.625rem;
 }
 
-.back{
-    background-color: black;
-    height: 100px;
-}
-
 /* ---------- section ---------- */
 section{
-    background-color: black;
     color: white;
-    margin: 0 auto;
+    margin: 100px auto 0 auto;
 }
 
 /* box1 */
@@ -157,7 +157,7 @@ border-left: none;
 .box2{
     width: 80%;
     height: 500px;
-    margin: 0 auto;
+    margin: 0 auto 100px auto;
     display: flex;
 }
 
@@ -192,11 +192,10 @@ border-left: none;
 .box3{
     text-align: center;
 }
-
 .box3 h3{
+    margin-top: 100px;
     font-size: 20px;
 }
-
 .box3 p{
     font-size: 0.625rem;
     margin-bottom: 30px;
@@ -227,7 +226,7 @@ border-left: none;
 
 /* box4 */
 .box4 table{
-    margin: 0 auto;
+    margin: 100px auto 0 auto;
     width: 90%;
     text-align: left;
 }
@@ -236,19 +235,19 @@ border-left: none;
     font-size: 0.812rem;
     border-bottom: 10px solid black;
 }
-
 .box4 table td{
     font-size: 0.562rem;
 }
-
 .box4 table .head,
 .box4 table td{
     border-right: 30px solid black;
 }
-
 .box14 table .head:last-child, 
 .box4 table td:last-child {
 border-right: none;
+}
+.box4 table tr.media-table{
+    display: none;
 }
 
 /* box5 */
@@ -259,6 +258,7 @@ border-right: none;
 .box5 h3{
     font-size: 1.25rem;
     margin-bottom: 10px;
+    margin-top: 100px;
 }
 
 .box5 p{
@@ -281,28 +281,6 @@ border-right: none;
 }
 
 /* box6 */
-/* .box6 ul{
-    width: 80%;
-    margin: 0 auto;
-}
-
-.box6 ul li{
-    font-size: 0.812rem;
-    text-align: left;
-    height: 50px;
-    line-height: 50px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.box6 button{
-    color: white;
-    cursor: pointer;
-    font-size: 25px;
-} */
-
 .box6 details{
     width: 80%;
     margin: 0 auto;
@@ -327,10 +305,9 @@ border-right: none;
 }
 
 
-
-
 /* ---------- footer ---------- */
 footer{
+    margin: 50px 0 50px 0;
     background-color: black;
     text-align: center;
     font-size: 0.625rem;
@@ -342,16 +319,270 @@ footer img{
     height: 100px;
 }
 
-footer a{
-    margin-right: 15px;
-}
-
-footer a:last-child{
-    margin-right: 0;
+footer .container .footer-menu{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
 footer .text-box{
     width: 90%;
     margin: 0 auto;
     margin-top: 20px;
+}
+
+/* 반응형 페이지 잡기 */
+@media (max-width : 670px) {
+    header{
+        background-position: center;
+    }
+    header .header-txt{
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    header .header-txt img{
+        width: 100px;
+        height: 100px;
+        margin-bottom: 0;
+    }
+    header .header-txt input{
+        width: 50%;
+    }
+
+    /* box2 */
+    .box2{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .box2 .txtBox h3{
+        font-size: 1rem;
+    }
+    .box2 .txtBox p{
+        font-size: 0.5rem;
+    }
+
+    /* box3 */
+    .box3{
+        width: 100%;
+    }
+    .box3 h3{
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+    .box3 p{
+        font-size: 0.5rem;
+    }
+    .box3 .inbox-1{
+        width: 100%;
+    }
+    .box3 .inbox-1 .inbox{
+        justify-content: space-between;
+    }
+
+    /* box4 */
+    .box4 table{
+        text-align: center;
+    }
+    .box4 table tr:nth-child(3){
+        display: none;
+    }
+    .box4 table .head,
+    .box4 table td {
+        border-right: 1px solid black;
+        font-size: 0.5rem;
+    }
+
+    /* box6 */
+    .box6 h3{
+        font-size: 1rem;
+    }
+    .box6 details summary{
+        font-size: 0.8rem;
+    }
+    .box6 details p{
+        font-size: 0.5rem;
+    }
+
+    /* footer */
+    footer .container{
+        width: 80%;
+        margin: 0 auto;
+    }
+    footer a,
+    footer .text-box p{
+        font-size: 0.5rem;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    footer .container .footer-menu{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    footer .container .footer-menu a{
+        margin: 0 10px;
+    }
+    footer .container .text-box p:nth-child(1){
+        display: none;
+    }
+}
+
+@media (max-width : 530px) {
+    header .header-txt h1{
+        font-size: 20px;
+    }
+    header .header-txt span{
+        font-size: 0.5rem;
+        margin-bottom: 0;
+    }
+    header .header-txt input,
+    header .header-txt button{
+        height: 20px;
+        font-size: 0.5rem;
+    }
+
+    /* box1 */
+    .box1 table tr th{
+        font-size: 0.8rem;
+        border-right: 1px solid #fff;
+    }
+    .box1 table tr th:last-child{
+        border-right: none;
+    }
+    .box1 table tr td{
+        display: none;
+    }
+    .box1 table{
+        width: 100%;
+    }
+
+    /* box4 */
+    .box4 table{
+        text-align: center;
+        width: 50%;
+    }
+    .box4 table tr:nth-child(1),
+    .box4 table tr:nth-child(2){
+        display: none;
+    }
+    .box4 table tr.media-table{
+        display: block;
+    }
+    .box4 table tr.media-table td svg{
+        width: 50px;
+        height: 50px;
+    }
+
+    /* box5 */
+    .box5 table{
+        margin-top: -20px;
+        width: 60%;
+    }
+    .box5 table tr td{
+        display: none;
+    }
+    .box5 table tr th{
+        width: 60px;
+        height: 60px;
+    }
+    .box5 table tr th:nth-child(1) img,
+    .box5 table tr th:nth-child(2) img{
+        object-fit: contain;
+    }
+
+    /* box6 */
+    .box6 h3{
+        font-size: 0.8rem;
+    }
+    .box6 details summary{
+        font-size: 0.6rem;
+    }
+    .box6 details summary p{
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width : 370px) {
+    html,body{
+        font-size: 80%;
+    }
+
+    /* box4 */
+    .box4 table{
+        width: 60%;
+    }
+    .box4 table tr.media-table td{
+        width: 100%;
+        text-align: center;
+    }
+    .box4 table tr.media-table td:nth-child(1){
+        display: none;
+    }
+
+    /* footer */
+    footer .container .footer-menu{
+        display: none;
+    }
+    footer .container img{
+        width: 70px;
+        height: 50px;
+        margin-bottom: -30px;
+    }
+    footer .container .text-box{
+        margin: 0 auto;
+    }
+}
+
+@media (max-width : 325px) {
+    .loginBtn{
+        font-size: 0.5rem;
+        width: 50px;
+        height: 25px;
+    }
+    header{
+        width: 100%;
+        background-position: center;
+        height: 250px;
+    }
+    header .header-txt img{
+        width: 50px;
+        height: 50px;
+    }    
+    header .header-txt h1{
+        font-size: 1rem;
+        margin-bottom: -20px;
+    }
+    header .header-txt span,
+    header .header-txt p{
+        display: none;
+    }
+    header .header-txt input,
+    header .header-txt button{
+        height: 20px;
+        font-size: 7px;
+    }
+    header .header-txt input{
+        width: 70%;
+    }
+    header .header-txt button{
+        width: 25%;
+    }
+
+    /* box3 */
+    .box3 p{
+        display: none;
+    }
+
+    /* box4 */
+    .box4{
+        display: none;
+    }
 }
