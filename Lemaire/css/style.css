@@ -82,10 +82,12 @@
 
 /* ==== sub-menu-box 영역 ==== */
 /* 하나씩 가려서 확인하기 */
-#tab1, #tab2, #tab3{
+/* #tab1, #tab2, #tab3{
     display: none;
-}
+} */
 .sub-menu-box{
+    display: none;
+
     position: fixed;
     top: 0;
     left: 0;
@@ -94,7 +96,7 @@
     background-color: white;
     transition: 0.5s;
     z-index: -1;
-    /* opacity: 0; */
+    opacity: 0;
 }
 .sub-menu-box.active{
     opacity: 1;
@@ -112,7 +114,7 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 99;
-    /* opacity: 0; */
+    opacity: 0;
     transition: 0.3s;
 }
 .sub-menu-box .sub-menu.active{
@@ -175,138 +177,274 @@
 /* ==== sec1 영역 ==== */
 .sec1{
     background: url(../img/sec-1-bg.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.sec1 .canvas{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: -20px;
+}
+.sec1 .canvas .carousel{
+    display: flex;
+    align-items: center;
+    animation: carousel 60s linear infinite ;
+}
+@keyframes carousel {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.sec1 .canvas .carousel .cell{
+    width: 280px;
+    height: 350px;
+    margin-left: -20px;
+    opacity: 0.6;
+}
+.sec1 .canvas .carousel .cell:nth-child(even){
+    opacity: 1;
+    width: 350px;
+    height: 400px;
+    margin-left: 10px;
+}
+.sec1 .canvas .carousel .cell img{
+    object-position: center top;
+}
+.sec1 .sec1-txt{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Silk Serif';
+    font-weight: 300;
+    color: #262320;
+    font-size: 2rem;
+    line-height: 1;
+    display: flex;
+    align-items: flex-end;
+    width: 70vw;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    text-align: center;
 }
 
+
 /* ==== sec2 영역 ==== */
-.sec2{
+.sec2 .container{
     background: url(../img/collect02.webp) no-repeat center center;
     background-size: cover;
     position: relative;
+    background-attachment: fixed;
 }
-.sec2 p{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    font-size: 300px;
-    line-height: 300px;
-    font-weight: 400;
+.sec2 .txt{
     color: white;
     font-family: 'Silk Serif';
+    font-size: 15rem;
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+    line-height: 1;
 }
 
-/* ==== sec3 영역 ==== */
-.sec3{
+
+.sec3, .sec4{
     background: rgba(229, 221, 196, 0.8);
-    position: relative;
-    padding: 20px;
 }
-.sec3 .txt1{
-    position: absolute;
-    top: 80px;
-    color: #362D26;
-    font-size: 50px;
+/* ==== sec3 영역 ==== */
+.sec3 .container{
+    padding: 72px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sec3 .container .about-txt-t{
     font-family: 'Silk Serif';
-    font-weight: 500;
-    line-height: 50px;
+    font-size: 2.5rem;
+    line-height: 1;
 }
-.sec3 .txt2{
-    position: absolute;
-    bottom: 30px;
-    left: 20px;
-    font-family: 'BrownStd';
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1rem;
+.sec3 .container .about-txt-m{
+    text-align: end;
 }
-.sec3 .txt3{
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    font-family: 'BrownStd';
-    font-weight: 400;
-    font-size: 1rem;
+.sec3 .container .about-txt-b{
     text-transform: uppercase;
+    font-size: 1rem;
 }
+
 
 /* ==== sec4 영역 ==== */
-.sec4{
-    background: rgba(229, 221, 196, 0.8);
-    clear: both;
+.sec4 .container{
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.sec4 .swiper{
-    width: 500px;
-    height: 100%;
-    float: left;
-    margin: 100px 0 100px 100px;
-}
-.sec4 .swiper .imgBox-1{
-    width: 350px;
-    height: 400px;
-    background: url(../img/ceo05.jpeg) no-repeat center center;
-    background-size: cover;
-    overflow: hidden;
+.sec4 .container .mask{
+    width: 25vw;
+    height: 65vh;
     border-top-left-radius: 300px;
     border-top-right-radius: 300px;
-}
-.sec4 .swiper .imgBox-2{
-    background: url(../img/ceo03.jpg) no-repeat top center;
-    background-size: cover;
-    background-position-y: -30px;
-    width: 350px;
-    height: 80px;
     overflow: hidden;
 }
-.sec4 .txtBox{
-    width: 500px;
-    height: 100%;
-    font-family: 'Silk Serif';
-    font-weight: 500;
-    position: relative;
-    float: right;
-    margin: 180px 120px;
+.sec4 .container .ceo-txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.sec4 .txtBox .name{
-    position: absolute;
-    text-transform: capitalize;
-    font-size: 40px;
+.sec4 .container .ceo-txt .ceo-head{
+    width: 600px;
+    height: 100px;
+    margin-bottom: 20px;
 }
-.sec4 .txtBox .name-r{
-    top: 0;
-    right: 0;
+.sec4 .container .ceo-txt .ceo-head img{
+    object-fit: contain;
 }
-.sec4 .txtBox .name-l{
-    top: 50px;
-    left: 0;
-}
-.sec4 .txtBox .and{
-    font-size: 70px;
-    position: absolute;
-    color: rgba(0, 0, 0, 0.4);
-    top: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.sec4 .txtBox .detail{
+.sec4 .container .ceo-txt .ceo-body{
     font-family: 'Pretendard';
-    font-size: 0.8rem;
-    color: rgba(38, 35, 32, 0.8);
-    width: 320px;
     font-weight: 400;
-    line-height: 16px;
-    position: absolute;
-    top: 120px;
-    left: 50%;
-    transform: translateX(-50%);
+    font-size: 0.8rem;
+    width: 24vw;
+    line-height: 1.5;
 }
 
 /* ==== sec5 영역 ==== */
-.sec5{
-    position: relative;
+.sec5 .container{
+    padding: 40px 32px 0px 32px;
 }
-.sec5 p{
-    position: absolute;
-    right: 0;
+.sec5 .container .head-txt{
     font-family: 'Silk Serif';
-    font-size: 100px;
-    font-weight: 500;
+    font-size: 4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: end;
+    height: 15vh;
+}
+.sec5 .container .store-gallery{
+    width: 100%;
+    display: flex;
+    height: calc(100% - 25vh);
+    border-bottom: 1px solid #362d26;
+}
+.sec5 .container .store-gallery .left{
+    display: flex;
+    width: calc(100% - 37vw);
+    border-right: 1px solid #362d26;
+}
+.sec5 .container .store-gallery .right{
+    width: 37vw;
+    display: flex;
+    justify-content: flex-end;
+}
+.sec5 .container .store-gallery .store .box1{
+    width: 300px;
+    height: 400px;
+}
+.sec5 .container .store-gallery .store .box2{
+    width: 267px;
+    height: 343px;
+    margin-left: -20px;
+}
+
+/* ==== footer 영역 ==== */
+.footer .container{
+    font-family: 'Pretendatd';
+    font-weight: 300;
+    letter-spacing: 1px;
+    width: 80vw;
+    margin: 0 auto;
+    text-transform: uppercase;
+    padding: 60px 0;
+    height: auto;
+}
+
+.footer .container .footer-t{
+    display: flex;
+}
+.footer .container .footer-t .box{
+    width: 20%;
+    height: 300px;
+}
+.footer .container .footer-t .box h2{
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 16px;
+}
+.footer .container .footer-t .box p{
+    font-size: 1rem;
+    color: #a8a8a8;
+    margin-bottom: 8px;
+}
+.footer .container .footer-t input{
+    border: none;
+    outline: none;
+    padding: 8px 0;
+    border-bottom: 1px solid #dbdbdb;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.footer .container .footer-t input::placeholder{
+    color: rgba(168, 168, 168, 0.7);
+    opacity: 1;
+    transition: 0.3s;
+}
+.footer .container .footer-t input:focus::placeholder{
+    opacity: 0;
+}
+.footer .container .footer-t .footer-btn{
+    width: 100%;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(168, 168, 168, 0.3);
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.8);
+    transition: 0.3s;
+}
+.footer .container .footer-t .footer-btn:hover{
+    background-color: rgba(168, 168, 168, 0.5);
+}
+
+.footer .container .footer-b .copyright{
+    font-size: 1rem;
+    color: rgba(0,0,0,0.8);
+    font-weight: 600;
+}
+
+/* ==== 상단이동 버튼 ==== */
+.top-btn{
+    width: 90px;
+    height: 90px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 999;
+    cursor: pointer;
+    display: none;
+}
+.top-btn::after{
+    content: '';
+    background : url(../img/Lemaire_topbtn-i-black.svg) no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 70px;
+    height: 70px;
+}
+.top-btn img{
+    animation: topBtn 30s linear infinite;
+}
+@keyframes topBtn {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
