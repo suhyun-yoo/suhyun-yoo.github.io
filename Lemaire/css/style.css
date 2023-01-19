@@ -4,10 +4,6 @@
     display: none;
 }
 
-/* #wrap{
-
-} */
-
 /* 전체 container 공통 스타일링 지정 */
 .container{
     height: 100vh;
@@ -38,6 +34,7 @@
 }
 .banner header.active{
     color: #262320;
+    background-color: white;
 }
 .banner header .menu-left,
 .banner header .menu-right{
@@ -86,10 +83,8 @@
     display: none;
 } */
 .sub-menu-box{
-    display: none;
-
     position: fixed;
-    top: 0;
+    top: 60px;
     left: 0;
     width: 100%;
     height: 50%;
