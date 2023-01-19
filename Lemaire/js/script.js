@@ -8,8 +8,8 @@ $(document).ready(function(){
         scrollBar : true,
 
         // 지정한 섹션에는 스크롤이 정상값으로 돌아가게 처리하기
-        // .footer 영역의 높이가 50vh로 화면을 다 채우지 않기 때문에 .sec4 또한 normalScrollElements에 추가해주어야 기본 스크롤이 생겨남
-        normalScrollElements : '.footer',
+        // .footer 영역의 높이가 50vh로 화면을 다 채우지 않기 때문에 .sec5 또한 normalScrollElements에 추가해주어야 기본 스크롤이 생겨남
+        normalScrollElements : '.sec5, .footer',
 
         // 높잇값이 풀페이지가 아닌 경우, 풀페이지 상단 영역으로 올라가는 것 막아주기
         fitToSection : false
