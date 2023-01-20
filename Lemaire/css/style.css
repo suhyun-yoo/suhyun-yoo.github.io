@@ -388,6 +388,7 @@ html,body{
 .sec5 .container .store-gallery .store .box1{
     width: 300px;
     height: 400px;
+    padding-bottom: 30px;
 }
 .sec5 .container .store-gallery .store .box2{
     width: 267px;
@@ -644,8 +645,8 @@ html,body{
     }
     .sec1 .container .canvas .carousel .cell,
     .sec1 .container .canvas .carousel .cell:nth-child(even){
-        width: 50%;
-        height: 740px;
+        width: 25%;
+        height: 55vh;
         margin-left: 0;
         opacity: 1;
     }
@@ -670,6 +671,11 @@ html,body{
         border-top-right-radius: 400px;
         height: 50vh;
     }
+    .sec4 .container .ceo-txt .ceo-head{
+        width: 300px;
+        height: 100px;
+        margin-bottom: -10px;
+    }
     .sec4 .ceo-txt .ceo-body{
         line-height: 1.5;
     }
@@ -684,7 +690,7 @@ html,body{
     }
 
     /* footer */
-    .footer .footer-t .box{
+    .footer .container .footer-t .box{
         width: 50%;
         height: auto;
         margin-bottom: 32px;
