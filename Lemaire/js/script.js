@@ -12,10 +12,15 @@ $(document).ready(function(){
           mouseY = e.pageY - $(window).scrollTop() + 15;
         $('.theBall-outer').attr('style', prefix + 'transform:translate(' + mouseX + 'px,' + mouseY + 'px)');
     });
+    });
 
-      
-
-      })
+    // 햄버거 버튼 클릭 시, sub-menu 보이기
+    $('#hamburger').click(function(){
+        $(this).toggleClass('active');
+        $('#hamburger span').toggleClass('active');
+        $('.menu-left').toggleClass('active');
+        $('.banner header .logo svg').toggleClass('acitve');
+    });
 
     // 윈도우의 너비가 800이상일 경우에만 풀페이지 선언 함수 선언
     function media(){
