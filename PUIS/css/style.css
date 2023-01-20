@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+/* banner 영역 */
+.banner{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+/* 1. header */
+.banner header{
+    width: 100%;
+    height: 80px;
+    background-color: #94A66D;
+    color: #F1F2F0;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.banner header h1.logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.banner header .menu-btn{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.banner header .menu-btn span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #F1F2F0;
+}
+/* 2. banner-box */
+.banner .banner-box{
+    width: 60vw;
+    height: 70vh;
+    margin: 140px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .banner-box .banner-box-left{
+    overflow: hidden;
+    width: 500px;
+    height: 100%;
+    border-top-left-radius: 200px;
+    margin-right: 10px;
+}
+.banner .banner-box .banner-box-right{
+    width: 531px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.banner .banner-box .banner-box-right .txt-box{
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 10px;
+    background-color: #a9b78a;
+    color: #f1f2f0;
+    text-align: center;
+}
+.banner .banner-box .banner-box-right .txt-box h2{
+    font-size: 1.5rem;
+    margin-bottom: -3px;
+}
+.banner .banner-box .banner-box-right .txt-box p{
+    text-transform: capitalize;
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+}
+.banner .banner-box .banner-box-right .txt-box .time p{
+    margin-bottom: 0;
+    color: white;
+}
+.banner .banner-box .banner-box-right .img-box{
+    border-bottom-right-radius: 200px;
+    overflow: hidden;
+}
+
+/* sec1 영역 */
+.sec1{
+    width: 100%;
+    height: 100vh;
+}
