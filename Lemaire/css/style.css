@@ -463,8 +463,8 @@ html,body{
 
 /* ==== 상단이동 버튼 ==== */
 .top-btn{
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     position: fixed;
     right: 50px;
     bottom: 50px;
@@ -476,8 +476,8 @@ html,body{
     content: '';
     background : url(../img/Lemaire_topbtn-i-black.svg) no-repeat;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 0;
+    left: 0;
     width: 70px;
     height: 70px;
 }
@@ -490,5 +490,217 @@ html,body{
     }
     to{
         transform: rotate(360deg);
+    }
+}
+
+/* 반응형 잡기 */
+@media (max-width : 1800px) {
+    .sec4 .ceo-txt .ceo-head{
+        width: 530px;
+    }    
+    .sec4 .ceo-txt .ceo-head img{
+        object-fit: contain;
+    }
+
+    /* sec5 */
+    .sec5 .store-gallery{
+        display: block;
+        border: none;
+    }
+    .sec5 .store-gallery .left{
+        border: none;
+        width: 100%;
+    }
+    .sec5 .store-gallery .left .box1{
+        margin-top: 0;
+        width: 50%;
+        height: auto;
+    }
+    .sec5 .store-gallery .box2{
+        margin-left: 20px;
+        width: 50%;
+        height: auto;
+    }
+    .sec5 .store-gallery .right{
+        display: none;
+    }
+    .sec5 .container{
+        height: auto;
+    }
+}
+
+@media (max-width : 1400px) {
+    /* sec2 */
+    .sec2 .container .txt{
+        font-size: 10rem;
+    }
+
+    /* sec3 */
+    .sec3 .container .about-txt-t{
+        font-size: 3.5rem;
+    }
+
+    /* sec4 */
+    .sec4 .container{
+        display: block;
+        height: auto;
+        padding: 100px 0;
+    }
+    .sec4 .container .mask{
+        width: 25%;
+        height: 40vh;
+    }
+    .sec4 .container .ceo-txt .ceo-body{
+        width: 100%;
+        line-height: 1.3;
+    }
+
+    /* footer */
+    .footer .container{
+        width: 100%;
+        padding: 32px;
+    }
+    .footer .footer-t{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width : 1000px) {
+    /* hamburger 버튼 보이기 */
+    #hamburger{
+        display: block;
+        z-index: 9999;
+        position: relative;
+        width: 20px;
+        height: 16px;
+    }
+    #hamburger span{
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        transition: 0.3s;
+    }
+    #hamburget span.active{
+        background-color: #262320;
+    }
+    #hamburger span:first-child{
+        left: 10px;
+        top: 0;
+    }
+    #hamburger span:last-child{
+        top: 10px;
+        left: 10px;
+    }
+
+    #hamburger.active span:first-child{
+        transform: translateY(10px);
+    }
+    #hamburger.active span:last-child{
+        transform: translateY(-10px);
+    }
+    .sub-menu-box,
+    .banner header .menu-right{
+        display: none;
+    }
+    .banner header .menu-left{
+        background-color: #ffffffc9;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        color: black;
+        /* 1000px 기준 80px */
+        flex-direction: column;
+        padding: 20% 10%;
+        /* 좌우 1000px 기준 100px */
+        justify-content: space-evenly;
+        transition: 0.5s;
+        transform: translateY(-100%);
+    }
+    .banner header .menu-left{
+        margin-bottom: 2rem;
+    }
+    .banner header .menu-left.active{
+        transform: translateY(0);
+    }
+
+    /* sec1 */
+    .sec1 .container{
+        height: auto;
+    }
+    .sec1 .container .canvas{
+        position: static;
+        display: block;
+        transform: translate(0);
+    }
+    .sec1 .container .canvas .carousel{
+        width: 100%;
+        flex-wrap: wrap;
+        animation: none;
+    }
+    .sec1 .container .canvas .carousel .cell,
+    .sec1 .container .canvas .carousel .cell:nth-child(even){
+        width: 50%;
+        height: 740px;
+        margin-left: 0;
+        opacity: 1;
+    }
+    .sec1 .container .canvas .carousel .cell:last-child,
+    .sec1 .container .canvas .carousel.box2,
+    .sec1 .sec1-txt{
+        display: none;
+    }
+
+    /* sec3 */
+    .sec3 .container .about-txt-t{
+        font-size: 2.5rem;
+    }
+    .sec3 .container .about-txt-b{
+        font-size: 0.8rem;
+    }
+
+    /* sec4 */
+    .sec4 .container .mask{
+        width: 100%;
+        border-top-left-radius: 400px;
+        border-top-right-radius: 400px;
+        height: 50vh;
+    }
+    .sec4 .ceo-txt .ceo-body{
+        line-height: 1.5;
+    }
+
+    /* sec5 */
+    .sec5 .container{
+        padding: 100px 30px;
+    }
+    .sec5 .container .head-txt{
+        font-size: 3rem;
+        height: auto;
+    }
+
+    /* footer */
+    .footer .footer-t .box{
+        width: 50%;
+        height: auto;
+        margin-bottom: 32px;
+    }
+
+    /* top-btn */
+    .top-btn{
+        width: 50px;
+        height: 50px;
+        right: 32px;
+        bottom: 32px;
+    }
+    .top-btn::after{
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
     }
 }
