@@ -4,8 +4,12 @@ $(document).ready(function(){
         // 새로고침 시, 최상단 section으로 이동되는 부분 막기
         anchors: ['anchor1','anchor2'],
         scrollBar : true,
-
-        // 스크롤 속도 설정
         scrollingSpeed : 500,
+    });
+
+    // menu-btn 클릭 시, 메뉴 보이기
+    $('.banner header .menu-btn').click(function(){
+        $(this).toggleClass('active');
+        $('.banner .sub-menu').toggleClass("active");
     });
 });
