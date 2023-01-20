@@ -12,4 +12,21 @@ $(document).ready(function(){
         $(this).toggleClass('active');
         $('.banner .sub-menu').toggleClass("active");
     });
+
+    // sec1 swiper
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 5,
+        spaceBetween: 60,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+          },
+      });
 });
