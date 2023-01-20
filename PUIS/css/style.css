@@ -154,6 +154,54 @@
 
 /* sec1 영역 */
 .sec1{
+    padding-top: 150px;
+    overflow: hidden;
+}
+.sec1 .container{
+    width: 90%;
+    margin: 0 auto;
+    height: calc(100vh - 150px);
+}
+
+/* 1. swiper */
+.sec1 .container .swiper{
     width: 100%;
-    height: 100vh;
+    height: 35vh;
+    border-top: 1px solid #3239235f;
+    border-bottom: 1px solid #3239235f;
+}
+.sec1 .container .swiper{
+    padding: 30px 50px 50px 50px;
+}
+.sec1 .container .swiper .swiper-slide img{
+    border-radius: 5px;
+}
+.sec1 .container .swiper .swiper-slide .txt-box{
+    font-size: 0.8rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #191c11;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.sec1 .container .swiper .swiper-slide .txt-box span{
+    color: #323923a0;
+}
+.sec1 .container .swiper .swiper-button-next::after,
+.sec1 .container .swiper .swiper-button-prev::after{
+    color: #323923;
+    transform: scale(0.6);
+}
+.sec1 .container .swiper .swiper-slide .tag{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background-color: #94a66d;
+    color: #F1F2F0;
+    width: 100px;
+    height: 20px;
+    font-size: 0.8rem;
+    line-height: 20px;
+    text-align: center;
 }
