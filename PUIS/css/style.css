@@ -1,10 +1,5 @@
 @charset "utf-8";
 
-/* section 영역 */
-.section{
-    padding-top: 80px;
-}
-
 /* banner 영역 */
 .banner{
     overflow: hidden;
@@ -22,12 +17,38 @@
     top: 0;
     left: 0;
     z-index: 9;
+    transition: 0.3s;
+}
+/* header에 active 클래스 추가 시, 스타일링 */
+.banner header.active{
+    background-color: transparent;
+    color: rgba(241, 242, 240, 0.5);
+    height: 50px;
+}
+.banner header.active h1.logo{
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+.banner header.active .menu-btn{
+    width: 20px;
+    height: 20px;
+}
+.banner header.active .menu-btn span{
+    background-color:rgba(241, 242, 240, 0.5);
+}
+.banner header.active .icon-box{
+    width: 30px;
+    height: 30px;
+}
+.banner header.active .icon-box svg{
+    stroke : rgba(241, 242, 240, 0.5);
 }
 .banner header h1.logo{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.3s;
 }
 .banner header .menu-btn{
     cursor: pointer;
@@ -85,7 +106,7 @@
 .banner .sub-menu{
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
     top: 0;
     left: 0;
@@ -94,6 +115,7 @@
     justify-content: center;
     transform: translateY(-100vh);
     transition: 0.5s;
+    z-index: 8;
 }
 .banner .sub-menu.active{
     transform: translateX(0);
@@ -130,7 +152,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -40%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,7 +202,7 @@
 /* 1. sec1-head */
 .sec1 .sec1-head{
     width: 100%;
-    height: 50%;
+    height: 60%;
     background: url(../img/dark-main2.jpg) no-repeat center center;
     background-size: cover;
 }
@@ -205,10 +227,17 @@
 }
 
 /* 2. sec1-body */
+.sec1 .sec1-body{
+    width: 100%;
+    height: 40%;
+}
 .sec1 .sec1-body .swiper{
     width: 80%;
     height: (50% - 100px);
     margin : 20px auto 0 auto;
+}
+.sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide{
+    cursor: pointer;
 }
 .sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide .tag{
     position: absolute;
@@ -231,8 +260,16 @@
 }
 .sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide .txt-box p{
     font-size: 1rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 100;
+    transition: 0.3s;
+}
+.sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide:hover .txt-box p{
+    text-decoration: underline;
 }
 .sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide .txt-box span{
     font-size: 0.8rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 100;
     color: #A5AFA5;
 }
