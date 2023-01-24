@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* banner 영역 */
+/* ========== banner 영역 ========== */
 .banner{
     overflow: hidden;
     display: flex;
@@ -198,15 +198,22 @@
     overflow: hidden;
 }
 
-/* section1 영역 */
-/* 1. sec1-head */
+/* ========== section1 section2 영역 ========== */
+/* 1. sec1-head / sec2-head*/
 .sec1 .sec1-head{
     width: 100%;
     height: 60%;
     background: url(../img/dark-main2.jpg) no-repeat center center;
     background-size: cover;
 }
-.sec1 .sec1-head .txt-box{
+.sec2 .sec2-head{
+    width: 100%;
+    height: 60%;
+    background: url(../img/dark-main1.jpg) no-repeat center center;
+    background-size: cover;
+}
+.sec1 .sec1-head .txt-box,
+.sec2 .sec2-head .txt-box{
     width: 100%;
     height: 100%;
     color: #f1f2f0;
@@ -216,28 +223,29 @@
     align-items: center;
     justify-content: center;
 }
-.sec1 .sec1-head .txt-box h2{
+.sec1 .sec1-head .txt-box h2,
+.sec2 .sec2-head .txt-box h2{
     font-size: 50px;
     padding-bottom: 10px;
 }
-.sec1 .sec1-head .txt-box p{
+.sec1 .sec1-head .txt-box p,
+.sec2 .sec2-head .txt-box p{
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 0.8rem;
     font-weight: 100;
 }
 
-/* 2. sec1-body */
-.sec1 .sec1-body{
+/* 2. sec1-body / sec2-body*/
+.sec1 .sec1-body,
+.sec2 .sec2-body{
     width: 100%;
     height: 40%;
 }
-.sec1 .sec1-body .swiper{
+.sec1 .sec1-body .swiper,
+.sec2 .sec2-body .swiper{
     width: 80%;
     height: (50% - 100px);
     margin : 20px auto 0 auto;
-}
-.sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide{
-    cursor: pointer;
 }
 .sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide .tag{
     position: absolute;
@@ -246,11 +254,14 @@
     background-color: #94A66D;
     color: #F1F2F0;
 }
-.sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide img{
+.sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide img,
+.sec2 .sec2-body .swiper .swiper-wrapper .swiper-slide img{
     width: 150px;
     height: 150px;
+    cursor: grab;
 }
-.sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide .txt-box{
+.sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide .txt-box,
+.sec2 .sec2-body .swiper .swiper-wrapper .swiper-slide .txt-box{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -258,18 +269,37 @@
     width: 150px;
     height: auto;
 }
-.sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide .txt-box p{
+.sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide .txt-box p,
+.sec2 .sec2-body .swiper .swiper-wrapper .swiper-slide .txt-box p{
     font-size: 1rem;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 100;
     transition: 0.3s;
+    cursor: pointer;
 }
-.sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide:hover .txt-box p{
+.sec2 .sec2-body .swiper .swiper-wrapper .swiper-slide .txt-box p{
+    width: 150px;
+    text-align: center;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide .txt-box p:hover,
+.sec2 .sec2-body .swiper .swiper-wrapper .swiper-slide .txt-box p:hover{
     text-decoration: underline;
 }
-.sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide .txt-box span{
+.sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide .txt-box span,
+.sec2 .sec2-body .swiper .swiper-wrapper .swiper-slide .txt-box span{
     font-size: 0.8rem;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 100;
     color: #A5AFA5;
+    cursor: pointer;
+}
+
+/* ========== footer 영역 ========== */
+footer{
+    width: 100%;
+    height: 300px;
+    background-color: lightgray;
 }
