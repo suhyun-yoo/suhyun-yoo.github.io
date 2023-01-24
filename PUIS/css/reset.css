@@ -24,6 +24,7 @@ a{
 button{
     border: none;
     outline: none;
+    background-color: transparent;
 }
 img, svg{
     width: 100%;

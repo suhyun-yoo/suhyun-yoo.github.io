@@ -100,6 +100,7 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    cursor: pointer;
 }
 
 /* 2. sub-menu */
@@ -118,7 +119,8 @@
     z-index: 8;
 }
 .banner .sub-menu.active{
-    transform: translateX(0);
+    transform: translateY(0);
+    transition: 0.3s;
 }
 .banner .sub-menu li{
     width: 100%;
@@ -139,7 +141,106 @@
     color: #94A66D;
 }
 
-/* 3. banner-box */
+/* 3. userBox > loginBox / signupBox */
+.banner .userBox-wrap{
+    display: none;
+}
+.banner .userBox-wrap{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+}
+.banner .userBox-wrap .userBox{
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    position: relative;
+}
+/* closeBtn */
+.banner .userBox-wrap .userBox .closeBtn{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.banner .userBox-wrap .userBox .closeBtn span{
+    width: 100%;
+    height: 2px;
+    background-color: #94A66D;
+    display: inline-block;
+    position: absolute;
+}
+.banner .userBox-wrap .userBox .closeBtn span:nth-child(1){
+    transform: rotate(45deg);
+    top: 50%;
+}
+.banner .userBox-wrap .userBox .closeBtn span:nth-child(2){
+    transform: rotate(-45deg);
+    top: 50%;
+}
+/* input-box */
+.banner .userBox-wrap .userBox .input-box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.banner .userBox-wrap .userBox .input-box h2{
+    margin-bottom: 10px;
+}
+.banner .userBox-wrap .userBox .input-box input{
+    border: none;
+    border-bottom: 1px solid black;
+    width: 70%;
+    height: 30px;
+    margin : 10px 0;
+    padding: 10px;
+}
+.banner .userBox-wrap .userBox .input-box input::placeholder{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.7rem;
+}
+.banner .userBox-wrap .userBox .input-box button{
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 70%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #94A66D;
+    color: #f1f2f0;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.banner .userBox-wrap .userBox .input-box button:hover{
+    background-color: #677547;
+    color: #f1f2f0;
+}
+.banner .userBox-wrap .userBox .input-box a{
+    color: rgba(0, 0, 0, 0.8);
+    width: 70%;
+    text-align: end;
+    margin-top: 10px;
+    font-size: 0.5rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.banner .userBox-wrap .userBox .input-box a:hover{
+    text-decoration: underline;
+}
+/* 4. signupBox */
+
+/* 5. banner-box */
 .banner .banner-box-wrap{
     width: 100%;
     height: 100%;
