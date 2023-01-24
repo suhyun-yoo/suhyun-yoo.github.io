@@ -1,10 +1,16 @@
 @charset "utf-8";
 
+/* section 영역 */
+.section{
+    padding-top: 80px;
+}
+
 /* banner 영역 */
 .banner{
-    width: 100%;
-    height: 100vh;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* 1. header */
 .banner header{
@@ -112,10 +118,19 @@
 }
 
 /* 3. banner-box */
+.banner .banner-box-wrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
 .banner .banner-box{
     width: 60vw;
     height: 70vh;
-    margin: 140px auto;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,56 +176,63 @@
     overflow: hidden;
 }
 
-/* sec1 영역 */
-.sec1{
-    padding-top: 150px;
-    overflow: hidden;
+/* section1 영역 */
+/* 1. sec1-head */
+.sec1 .sec1-head{
+    width: 100%;
+    height: 50%;
+    background: url(../img/dark-main2.jpg) no-repeat center center;
+    background-size: cover;
 }
-.sec1 .container{
-    width: 90%;
-    margin: 0 auto;
-    height: calc(100vh - 150px);
+.sec1 .sec1-head .txt-box{
+    width: 100%;
+    height: 100%;
+    color: #f1f2f0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sec1 .sec1-head .txt-box h2{
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+.sec1 .sec1-head .txt-box p{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 100;
 }
 
-/* 1. swiper */
-.sec1 .container .swiper{
-    width: 100%;
-    height: 35vh;
-    border-top: 1px solid #3239235f;
-    border-bottom: 1px solid #3239235f;
+/* 2. sec1-body */
+.sec1 .sec1-body .swiper{
+    width: 80%;
+    height: (50% - 100px);
+    margin : 20px auto 0 auto;
 }
-.sec1 .container .swiper{
-    padding: 30px 50px 50px 50px;
-}
-.sec1 .container .swiper .swiper-slide img{
-    border-radius: 5px;
-}
-.sec1 .container .swiper .swiper-slide .txt-box{
-    font-size: 0.8rem;
-    font-family: 'Noto Sans KR', sans-serif;
-    color: #191c11;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-}
-.sec1 .container .swiper .swiper-slide .txt-box span{
-    color: #323923a0;
-}
-.sec1 .container .swiper .swiper-button-next::after,
-.sec1 .container .swiper .swiper-button-prev::after{
-    color: #323923;
-    transform: scale(0.6);
-}
-.sec1 .container .swiper .swiper-slide .tag{
+.sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide .tag{
     position: absolute;
-    top: 10px;
+    top: 5px;
     left: 0;
-    background-color: #94a66d;
+    background-color: #94A66D;
     color: #F1F2F0;
-    width: 100px;
-    height: 20px;
+}
+.sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide img{
+    width: 150px;
+    height: 150px;
+}
+.sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide .txt-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: auto;
+}
+.sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide .txt-box p{
+    font-size: 1rem;
+}
+.sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide .txt-box span{
     font-size: 0.8rem;
-    line-height: 20px;
-    text-align: center;
+    color: #A5AFA5;
 }
