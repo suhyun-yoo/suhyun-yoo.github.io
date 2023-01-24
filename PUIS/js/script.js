@@ -10,6 +10,9 @@ $(document).ready(function(){
     });
 
     // userBox
+    $('.banner .userBox-wrap.loginBox').hide();
+    $('.banner .userBox-wrap.signupBox').hide();
+
     // 1. icon-box 클릭 시, 로그인 창 보이기
     $('.banner .icon-box').click(function(){
         $('.banner .userBox-wrap.loginBox').slideDown();
