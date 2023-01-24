@@ -13,20 +13,39 @@ $(document).ready(function(){
         $('.banner .sub-menu').toggleClass("active");
     });
 
+    // sub-menu > menu 버튼 클릭 시, section1으로 이동하고 sub-menu 닫기
+    $('.banner .sub-menu').children().first().click(function(){
+        let sec1Top = $('.sec1').offset().top;
+        $('html, body').animate({
+            scrollTop : sec1Top
+        }, 1000);
+        $('.banner .sub-menu').removeClass('active');
+    });
+
+    // section1 section2 영역에서는 header 스타일링 변경
+    $(window).scroll(function(){
+        sec1Top = $('.sec1').offset().top;
+        let sct = $(window).scrollTop();
+
+        if(sct >= sec1Top){
+            $('.banner header').addClass('active');
+        } else {
+            $('.banner header').removeClass('active');
+
+        }
+    });
+
     // sec1 swiper
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 5,
-        spaceBetween: 60,
-        slidesPerGroup: 1,
+        centeredSlides: true,
+        spaceBetween: 30,
         loop: true,
+        grabCursor: true,
         loopFillGroupWithBlank: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        // autoplay: {
-        //     delay: 2000,
-        //     disableOnInteraction: false,
-        //   },
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+          },
       });
 });
