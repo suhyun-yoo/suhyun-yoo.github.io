@@ -49,6 +49,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     transition: 0.3s;
+    cursor: pointer;
+}
+.banner header h1.logo:hover{
+    scale: 1.1;
 }
 .banner header .menu-btn{
     cursor: pointer;
@@ -238,13 +242,14 @@
 .banner .userBox-wrap .userBox .input-box a:hover{
     text-decoration: underline;
 }
-/* 4. signupBox */
-
-/* 5. banner-box */
+/* 4. banner-box */
 .banner .banner-box-wrap{
     width: 100%;
     height: 100%;
     position: relative;
+}
+.banner .banner-box-wrap-mb{
+    display: none;
 }
 .banner .banner-box{
     width: 60vw;
@@ -275,11 +280,16 @@
 }
 .banner .banner-box .banner-box-right .txt-box{
     width: 100%;
+    height: 30%;
     padding: 20px 0;
     margin-bottom: 10px;
     background-color: #a9b78a;
     color: #f1f2f0;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .banner .banner-box .banner-box-right .txt-box h2{
     font-size: 1.5rem;
@@ -295,6 +305,7 @@
     color: white;
 }
 .banner .banner-box .banner-box-right .img-box{
+    height: 70%;
     border-bottom-right-radius: 200px;
     overflow: hidden;
 }
@@ -341,6 +352,9 @@
 .sec2 .sec2-body{
     width: 100%;
     height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .sec1 .sec1-body .swiper,
 .sec2 .sec2-body .swiper{
@@ -359,7 +373,6 @@
 .sec2 .sec2-body .swiper .swiper-wrapper .swiper-slide img{
     width: 150px;
     height: 150px;
-    cursor: grab;
 }
 .sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide .txt-box,
 .sec2 .sec2-body .swiper .swiper-wrapper .swiper-slide .txt-box{
@@ -385,8 +398,8 @@
     text-overflow:ellipsis;
     white-space:nowrap;
 }
-.sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide .txt-box p:hover,
-.sec2 .sec2-body .swiper .swiper-wrapper .swiper-slide .txt-box p:hover{
+.sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide:hover .txt-box p,
+.sec2 .sec2-body .swiper .swiper-wrapper .swiper-slide:hover .txt-box p{
     text-decoration: underline;
 }
 .sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide .txt-box span,
@@ -403,4 +416,69 @@ footer{
     width: 100%;
     height: 300px;
     background-color: lightgray;
+}
+
+/* =========== 반응형 잡기 ========== */
+@media (max-width : 1380px) {
+    .banner .banner-box{
+        width: 80vw;
+    }
+}
+@media (max-width : 1050px) {
+    
+}
+@media (max-width : 1030px) {
+    .banner .banner-box{
+        width: 90vw;
+    }
+}
+@media (max-width : 830px) {
+    .banner .banner-box{
+        display: none;
+    }
+    .banner .banner-box-wrap-mb{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        margin: 0 auto;
+    }
+    .banner .banner-box-wrap-mb .banner-box{
+        width: 80%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .banner .banner-box-wrap-mb .banner-box .txt-box{
+        background-color: #677547;
+        color: #A5AFA5;
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: -90px;
+        border-top-right-radius: 100px;
+    }
+    .banner .banner-box-wrap-mb .banner-box .banner-wrap-mb{
+        width: 100%;
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner .banner-box-wrap-mb .banner-box .banner-wrap-mb .banner-box-left,
+    .banner .banner-box-wrap-mb .banner-box .banner-wrap-mb .banner-box-right{
+        border-radius: 0;
+        width: 50%;
+        height: 70%;
+        object-fit: cover;
+    }
+    .banner .banner-box-wrap-mb .banner-box .banner-wrap-mb .banner-box-left{
+        border-bottom-left-radius: 100px;
+    }
 }
