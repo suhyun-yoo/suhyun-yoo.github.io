@@ -1,19 +1,4 @@
 $(document).ready(function(){
-
-    // 마우스 커서 가져와 사용하기
-    $(function() {
-        var prefix = function() {
-          var a = window.getComputedStyle(document.documentElement, ""),
-            b = (Array.prototype.slice.call(a).join("").match(/-(moz|webkit|ms)-/) || "" === a.OLink && ["", "o"])[1];
-          return "WebKit|Moz|MS|O".match(new RegExp("(" + b + ")", "i"))[1], "-" + b + "-"
-        }();
-        $(document).mousemove(function(e) {
-          mouseX = e.pageX + 15;
-          mouseY = e.pageY - $(window).scrollTop() + 15;
-        $('.theBall-outer').attr('style', prefix + 'transform:translate(' + mouseX + 'px,' + mouseY + 'px)');
-    });
-    });
-
     // 햄버거 버튼 클릭 시, sub-menu 보이기
     $('#hamburger').click(function(){
         $(this).toggleClass('active');
