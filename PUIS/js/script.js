@@ -37,7 +37,6 @@ $(document).ready(function(){
         $('.banner .userBox-wrap.loginBox').hide();
         $('.banner .userBox-wrap input').val('');
         alert('로그인 완료!');
-
     });
     // 4-2. 회원가입하기
     $('.banner .userBox-wrap.signupBox .input-box button').click(function(){
@@ -52,7 +51,6 @@ $(document).ready(function(){
         $(this).toggleClass('active');
         $('.banner .sub-menu').toggleClass("active");
     });
-
     // sub-menu > menu 버튼 클릭 시, section1으로 이동하고 sub-menu 닫기
     $('.banner .sub-menu').children().first().click(function(){
         let sec1Top = $('.sec1').offset().top;
@@ -64,8 +62,10 @@ $(document).ready(function(){
 
     // section1 section2 영역에서는 header 스타일링 변경
     $(window).scroll(function(){
-        sec1Top = $('.sec1').offset().top;
+        sec1Top = $('.sec1').offset().top - 100;
         let sct = $(window).scrollTop();
+        console.log(sec1Top);
+        console.log(sct)
 
         if(sct >= sec1Top){
             $('.banner header').addClass('active');
@@ -75,17 +75,26 @@ $(document).ready(function(){
         }
     });
 
-    // sec1 swiper
+    // pudding financier swiper
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 5,
-        centeredSlides: true,
         spaceBetween: 30,
         loop: true,
-        grabCursor: true,
         loopFillGroupWithBlank: true,
         autoplay: {
             delay: 2000,
             disableOnInteraction: false,
           },
       });
+
+    // swiper 영역에 마우스 호버 시, 슬라이드 멈추고
+    // 마우스가 떠나면 다시 재생하기
+    $(".mySwiper").each(function(elem, target){
+        var swp = target.swiper;
+        $(this).hover(function() {
+            swp.autoplay.stop();
+        }, function() {
+            swp.autoplay.start();
+        });
+    });
 });
