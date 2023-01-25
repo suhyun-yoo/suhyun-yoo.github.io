@@ -4,43 +4,6 @@
     display: none;
 }
 
-/* 마우스 커서 커스텀 */
-*{
-    cursor: none;
-}
-html,body{
-    cursor: url(../img/cursor.svg), auto;
-}
-.theBall,
-.theBall-outer{
-    width: 20px;
-    height: 20px;
-}
-.theBall-outer{
-    position: fixed;
-    top: -20px;
-    left: -20px;
-    pointer-events: none;
-    z-index: 99999;
-}
-.theBall{
-    position: absolute;
-    background-color: #dbdbdb;
-    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32,1.275);
-    transform-origin: center center;
-}
-.theBall-outer.zoom .theBall{
-    border-radius: 50%;
-    transform: scale(2.5);
-}
-.theBall-outer.zoom2 .theBall{
-    border-radius: 50%;
-    transform: scale(5);
-}
-.theBall-outer.zoom3 .theBall{
-    transform: scaleY(2) scaleX(5);
-}
-
 /* 전체 container 공통 스타일링 지정 */
 .container{
     height: 100vh;
@@ -494,7 +457,7 @@ html,body{
     }
 }
 
-/* 반응형 잡기 */
+/* ========== 반응형 잡기 ========== */
 @media (max-width : 1800px) {
     .sec4 .ceo-txt .ceo-head{
         width: 530px;
@@ -502,7 +465,6 @@ html,body{
     .sec4 .ceo-txt .ceo-head img{
         object-fit: contain;
     }
-
     /* sec5 */
     .sec5 .store-gallery{
         display: block;
@@ -535,12 +497,10 @@ html,body{
     .sec2 .container .txt{
         font-size: 10rem;
     }
-
     /* sec3 */
     .sec3 .container .about-txt-t{
         font-size: 3.5rem;
     }
-
     /* sec4 */
     .sec4 .container{
         display: block;
@@ -555,7 +515,6 @@ html,body{
         width: 100%;
         line-height: 1.3;
     }
-
     /* footer */
     .footer .container{
         width: 100%;
@@ -628,7 +587,6 @@ html,body{
     .banner header .menu-left.active{
         transform: translateY(0);
     }
-
     /* sec1 */
     .sec1 .container{
         height: auto;
@@ -655,7 +613,6 @@ html,body{
     .sec1 .sec1-txt{
         display: none;
     }
-
     /* sec3 */
     .sec3 .container .about-txt-t{
         font-size: 2.5rem;
@@ -663,7 +620,6 @@ html,body{
     .sec3 .container .about-txt-b{
         font-size: 0.8rem;
     }
-
     /* sec4 */
     .sec4 .container .mask{
         width: 100%;
@@ -679,7 +635,6 @@ html,body{
     .sec4 .ceo-txt .ceo-body{
         line-height: 1.5;
     }
-
     /* sec5 */
     .sec5 .container{
         padding: 100px 30px;
@@ -688,14 +643,12 @@ html,body{
         font-size: 3rem;
         height: auto;
     }
-
     /* footer */
     .footer .container .footer-t .box{
         width: 50%;
         height: auto;
         margin-bottom: 32px;
     }
-
     /* top-btn */
     .top-btn{
         width: 50px;
@@ -708,5 +661,85 @@ html,body{
         left: 0;
         width: 50px;
         height: 50px;
+    }
+}
+
+@media (max-width : 760px) {
+    .banner header .logo{
+        width: 164px;
+        height: 24px;
+    }
+    .sec1 .cell,
+    .sec1 .cell:nth-child(even){
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+    }
+    .sec2 .container{
+        height: 700px;
+    }
+    .sec2 .txt{
+        font-size: 7rem;
+    }
+    .sec3 .container{
+        padding: 68px 16px;
+    }
+    .sec4 .container{
+        height: auto;
+    }
+    .sec4 .ceo-txt{
+        margin-top: 32px;
+    }
+    .sec5 .container{
+        padding: 50px 16px;
+    }
+    .sec5 .head-txt{
+        text-align: left;
+    }
+    .footer .container{
+        padding: 50px 16px;
+    }
+    .footer .footer-t .box{
+        width: 100%;
+        border-top: 0.1px solid #dbdbdb;
+        padding-top: 16px;
+    }
+    .footer .footer-t input{
+        border: 1px solid #dbdbdb;
+        outline: none;
+        padding: 8px 5px;
+        width: 50%;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width : 525px) {
+    .sec2 .container{
+        background-attachment: scroll;
+    }   
+    .sec2 .txt{
+        font-size: 6rem;
+        white-space: nowrap;
+    }
+    .sec3 .about-txt-t{
+        font-size: 1.8rem;
+    }
+    .sec4 .mask{
+        height: 60vh;
+    }
+    .sec4 .ceo-txt .ceo-head{
+        width: 100%;
+        height: 85px;
+    }
+    .sec4 .ceo-txt .ceo-body{
+        font-size: 0.8rem;
+        margin-top: 16px;
+    }
+    .sec5 .head-txt{
+        font-size: 3rem;
+    }
+    .footer .footer-t .box h1,
+    .footer .footer-t .box p{
+        font-size: 0.8rem;
     }
 }
