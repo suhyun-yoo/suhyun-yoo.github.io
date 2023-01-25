@@ -7,31 +7,20 @@ $(document).ready(function(){
         $('.banner header .logo svg').toggleClass('acitve');
     });
 
+
+    media();
     // 윈도우의 너비가 800이상일 경우에만 풀페이지 선언 함수 선언
     function media(){
         let ww = $(window).width();
         if(ww >= 800){
             new fullpage('#wrap', {
-                // 새로고침 시, 최상단 section으로 이동되는 부분 막기
-                anchors: ['anchor1','anchor2','anchor3','anchor4','anchor5','anchor6'],
-
-                // 세로 스크롤바 생성 (생성하지 않으면 윈도우 스크롤값을 인식하지 못함 / 기본값이 false임)
                 scrollBar : true,
-
-                // 지정한 섹션에는 스크롤이 정상값으로 돌아가게 처리하기
-                // .footer 영역의 높이가 50vh로 화면을 다 채우지 않기 때문에 .sec5 또한 normalScrollElements에 추가해주어야 기본 스크롤이 생겨남
-                normalScrollElements : '.sec5, .footer',
-
-                // 높잇값이 풀페이지가 아닌 경우, 풀페이지 상단 영역으로 올라가는 것 막아주기
+                normalScrollElements : '.sec4, .sec5, .footer',
                 fitToSection : false,
-
-                // 스크롤 속도 설정
                 scrollingSpeed : 500,
             });
         };
     };
-    // 함수 기본 호출
-    media();
     // 리사이즈 시, 자동 호출
     $(window).resize(function(){
         ww = $(window).width();
