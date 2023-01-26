@@ -247,6 +247,7 @@ iframe{
 .banner .userBox-wrap .userBox .input-box a:hover{
     text-decoration: underline;
 }
+
 /* 4. banner-box */
 .banner .banner-box-wrap{
     width: 100%;
@@ -314,6 +315,7 @@ iframe{
     border-bottom-right-radius: 200px;
     overflow: hidden;
 }
+
 
 /* 스크롤 표시 */
 .scroll-box{
@@ -496,24 +498,24 @@ footer{
         width: 80%;
         height: 100%;
         display: flex;
+        justify-content: space-between;
+        align-items: center;
         flex-direction: column;
     }
     .banner .banner-box-wrap-mb .banner-box .txt-box{
-        background-color: #677547;
-        color: #A5AFA5;
+        background-color: #a9b78a;
+        color: white;
         width: 100%;
-        height: 20%;
+        height: 30%;
         display: flex;
         justify-content: center;
         align-content: center;
         flex-direction: column;
         text-align: center;
-        margin-bottom: -90px;
-        border-top-right-radius: 100px;
     }
     .banner .banner-box-wrap-mb .banner-box .banner-wrap-mb{
         width: 100%;
-        height: 70%;
+        height: 65%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -522,11 +524,8 @@ footer{
     .banner .banner-box-wrap-mb .banner-box .banner-wrap-mb .banner-box-right{
         border-radius: 0;
         width: 50%;
-        height: 70%;
+        height: 100%;
         object-fit: cover;
-    }
-    .banner .banner-box-wrap-mb .banner-box .banner-wrap-mb .banner-box-left{
-        border-bottom-left-radius: 100px;
     }
 }
 @media (max-width : 580px) {
