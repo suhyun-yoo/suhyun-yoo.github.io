@@ -412,7 +412,7 @@ iframe{
     height: 30px;
     font-weight: 100;
     line-height : 30px;
-    font-size: 3px;
+    font-size: 0.5rem;
     position: absolute;
     transition: 0.3s;
 }
