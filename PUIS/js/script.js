@@ -88,10 +88,22 @@ $(document).ready(function(){
 
     // pudding financier swiper
     // window 크기값에 따라 siwper 크기 변경하기
-    $(window).resize(function(){
+    // 1. 함수 선언
+    const swiperRe = () => {
         let ww = $(window).width();
         console.log(ww);
-        if(ww >= 1000){
+        if(ww >= 1400){
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 7,
+                spaceBetween: 30,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                  },
+            });
+        } else if(ww >= 1000 && ww < 1400){
             var swiper = new Swiper(".mySwiper", {
                 slidesPerView: 5,
                 spaceBetween: 30,
@@ -136,6 +148,12 @@ $(document).ready(function(){
                   },
             });
         }
+    }
+    // 2. 함수 불러와 사용하기
+    swiperRe();
+    $(window).resize(function(){
+        let ww = $(window).width();
+        swiperRe();
     });
 
 
