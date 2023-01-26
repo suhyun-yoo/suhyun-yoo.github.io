@@ -69,6 +69,7 @@ $(document).ready(function(){
             scrollTop : sec1Top
         }, 1000);
         $('.banner .sub-menu').removeClass('active');
+        $('.banner header .menu-btn').removeClass('active');
     });
 
     // section1 section2 영역에서는 header 스타일링 변경
