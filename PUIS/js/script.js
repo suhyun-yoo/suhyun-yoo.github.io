@@ -93,7 +93,7 @@ $(document).ready(function(){
     // 1. 함수 선언
     const swiperRe = () => {
         let ww = $(window).width();
-        console.log(ww);
+        // console.log(ww);
         if(ww >= 1400){
             var swiper = new Swiper(".mySwiper", {
                 slidesPerView: 7,
@@ -167,8 +167,19 @@ $(document).ready(function(){
         });
     });
 
-    // ===== 버튼 클릭 시, 메뉴 소개 영역 보이기
-    $('.banner .banner-box-wrap .banner-box .banner-box-right .txt-box a').click(function(){
-        $('.sec3').show();
+
+    // ===== window 스크롤 발생 시, 없애기
+    $(window).scroll(function(){
+        let sct = $(window).scrollTop();
+        if(sct >= $('.sec1').offset().top){
+            $('.scroll-box').hide();
+        } else {
+            $('.scroll-box').show();
+        }
+    });
+
+    // ===== menu 버튼 클릭 시, 사이드 메뉴 보이기
+    $('.menuBtn').click(function(){
+        $('.side-menu-wrap .side-menu').toggleClass('active');
     });
 });

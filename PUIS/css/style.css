@@ -233,17 +233,7 @@ iframe{
     background-color: #677547;
     color: #f1f2f0;
 }
-.banner .userBox-wrap .userBox .input-box a{
-    color: rgba(0, 0, 0, 0.8);
-    width: 70%;
-    text-align: end;
-    margin-top: 10px;
-    font-size: 0.5rem;
-    font-family: 'Noto Sans KR', sans-serif;
-}
-.banner .userBox-wrap .userBox .input-box a:hover{
-    text-decoration: underline;
-}
+
 
 /* 4. banner-box */
 .banner .banner-box-wrap{
@@ -314,6 +304,7 @@ iframe{
     bottom: 0;
     right: 10px;
     font-size: 0.8rem;
+    cursor: pointer;
 }
 .banner .banner-box .banner-box-right .img-box{
     height: 70%;
@@ -324,10 +315,13 @@ iframe{
 /* 스크롤 표시 */
 .scroll-box{
     width: 50px;
-    height: 50px;
+    height: 30px;
     position: fixed;
     bottom: 10px;
-    right: 10px;
+    /* right: 10px; */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
     overflow: hidden;
     cursor: pointer;
 }
@@ -358,16 +352,18 @@ iframe{
     } 
 }
 
-/* topBtn */
-.topBtn{
+/* side-menu */
+.menuBtn{
     width: 50px;
     height: 50px;
     position: fixed;
-    right: 10px;
-    bottom: 80px;
     text-align: center;
+    cursor: pointer;
+    right: 10px;
+    bottom: 10px;
+    z-index: 99;
 }
-.topBtn p{
+.menuBtn p{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -377,16 +373,71 @@ iframe{
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 0.5rem;
 }
-.topBtn img{
-    width: 50px;
-    height: 50px;
-    animation: topBtn 10s linear infinite;
+.menuBtn img{
+    animation: menuBtn 5s linear infinite;
 }
-@keyframes topBtn {
+@keyframes menuBtn {
     to{
         transform: rotate(360deg);
     }
 }
+/* menuBtn > side-menu 영역 */
+.side-menu-wrap{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+.side-menu-wrap .side-menu{
+    transition: 0.3s;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    display: none;
+}
+.side-menu-wrap .side-menu.active{
+    display: block;
+}
+.side-menu-wrap .side-menu li{
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 100;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-weight: 100;
+    line-height : 30px;
+    font-size: 3px;
+    position: absolute;
+    transition: 0.3s;
+}
+.side-menu-wrap .side-menu li:hover{
+    background-color: #94a66d83;
+}
+
+.side-menu-wrap .side-menu li:nth-child(1){
+    right: 0;
+    top: 0;
+}
+.side-menu-wrap .side-menu li:nth-child(2){
+    right: 30px;
+    top: 13px;
+}
+.side-menu-wrap .side-menu li:nth-child(3){
+    left: 15px;
+    bottom: 30px;
+}
+.side-menu-wrap .side-menu li:last-child{
+    left: 0;
+    bottom: 0;
+}
+
+
 
 /* ========== section1 section2 영역 ========== */
 /* 1. sec1-head / sec2-head*/
@@ -447,7 +498,7 @@ iframe{
 .sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide .tag{
     position: absolute;
     top: 5px;
-    left: 0;
+    left: 20px;
     background-color: #94A66D;
     color: #F1F2F0;
 }
