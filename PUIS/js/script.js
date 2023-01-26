@@ -96,7 +96,7 @@ $(document).ready(function(){
         if(ww >= 1400){
             var swiper = new Swiper(".mySwiper", {
                 slidesPerView: 7,
-                spaceBetween: 30,
+                centeredSlides: true,
                 loop: true,
                 loopFillGroupWithBlank: true,
                 autoplay: {

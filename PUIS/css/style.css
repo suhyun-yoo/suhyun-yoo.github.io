@@ -400,7 +400,10 @@ iframe{
 .sec2 .sec2-body .swiper{
     width: 80%;
     height: (50% - 100px);
-    margin : 20px auto 0 auto;
+    margin : 0 auto;
+}
+.sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide{
+    text-align: center;
 }
 .sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide .tag{
     position: absolute;
@@ -420,7 +423,7 @@ iframe{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 150px;
+    width: 100%;
     height: auto;
 }
 .sec1 .sec1-body .swiper .swiper-wrapper .swiper-slide .txt-box p,
