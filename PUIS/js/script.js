@@ -182,4 +182,26 @@ $(document).ready(function(){
     $('.menuBtn').click(function(){
         $('.side-menu-wrap .side-menu').toggleClass('active');
     });
+    // 1. menu
+    $('.side-menu-wrap .side-menu .menu').click(function(){
+        alert('메뉴확인페이지');
+        $('.side-menu-wrap .side-menu').removeClass('active');
+    });
+    // 2. ask
+    $('.side-menu-wrap .side-menu .ask').click(function(){
+        alert('문의하기');
+        $('.side-menu-wrap .side-menu').removeClass('active');
+    });
+    // 3. top
+    $('.side-menu-wrap .side-menu .top').click(function(){
+        $('html, body').animate({
+            scrollTop : 0
+        }, 1000);
+        $('.side-menu-wrap .side-menu').removeClass('active');
+    });
+    // 4. dark
+    $('.side-menu-wrap .side-menu .dark').click(function(){
+        alert('다크모드');
+        $('.side-menu-wrap .side-menu').removeClass('active');
+    });
 });
