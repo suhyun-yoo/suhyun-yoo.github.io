@@ -233,7 +233,17 @@ iframe{
     background-color: #677547;
     color: #f1f2f0;
 }
-
+.banner .userBox-wrap .userBox .input-box a{
+    color: rgba(0, 0, 0, 0.8);
+    width: 70%;
+    text-align: end;
+    margin-top: 10px;
+    font-size: 0.5rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.banner .userBox-wrap .userBox .input-box a:hover{
+    text-decoration: underline;
+}
 
 /* 4. banner-box */
 .banner .banner-box-wrap{
@@ -297,14 +307,6 @@ iframe{
 .banner .banner-box .banner-box-right .txt-box .time p{
     margin-bottom: 0;
     color: white;
-}
-.banner .banner-box .banner-box-right .txt-box .menu-line-up{
-    text-decoration: underline;
-    position: absolute;
-    bottom: 0;
-    right: 10px;
-    font-size: 0.8rem;
-    cursor: pointer;
 }
 .banner .banner-box .banner-box-right .img-box{
     height: 70%;
@@ -437,7 +439,11 @@ iframe{
     bottom: 0;
 }
 
-
+/* section 기본 크기값 */
+section{
+    width: 100%;
+    height: 100vh;
+}
 
 /* ========== section1 section2 영역 ========== */
 /* 1. sec1-head / sec2-head*/
