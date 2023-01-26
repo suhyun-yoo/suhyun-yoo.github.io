@@ -9,6 +9,17 @@ $(document).ready(function(){
         fitToSection : false
     });
 
+    // 위치값에 따라 scroll 버튼 보이기 및 감추기
+    $(window).scroll(function(){
+        let sct = $(this).scrollTop();
+        const sec3 = $('.sec2').offset().top;
+        if(0 <= sct && sct <= sec3){
+            $('.scroll-box').show();
+        } else{
+            $('.scroll-box').hide();
+        }
+    });
+
     // userBox
     $('.banner .userBox-wrap.loginBox').hide();
     $('.banner .userBox-wrap.signupBox').hide();
@@ -96,5 +107,10 @@ $(document).ready(function(){
         }, function() {
             swp.autoplay.start();
         });
+    });
+
+    // 버튼 클릭 시, 메뉴 소개 영역 보이기
+    $('.banner header .logo').click(function(){
+        $('.sec3').show();
     });
 });
