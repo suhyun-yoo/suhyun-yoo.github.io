@@ -136,10 +136,12 @@ html, body{
     height: 277px;
 }
 .sub-menu-box .sub-menu .menu-left .sub-menu-detail{
-    margin-right: 50px;
+    /* margin-right: 50px; */
+    width: 33.333%;
 }
-.sub-menu-box .sub-menu .menu-left .sub-menu-detail .sub-menu-head{
-    font-size: 0.8rem;
+.sub-menu-box .sub-menu .menu-left .sub-menu-detail .sub-menu-head p{
+    width: 100%;
+    font-size: 1rem;
     color: rgba(0,0,0,0.8);
 }
 .sub-menu-box .sub-menu .menu-left .sub-menu-detail .sub-menu-body{
