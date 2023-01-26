@@ -139,7 +139,7 @@ html, body{
     /* margin-right: 50px; */
     width: 33.333%;
 }
-.sub-menu-box .sub-menu .menu-left .sub-menu-detail .sub-menu-head p{
+.sub-menu-box .sub-menu .menu-left .sub-menu-detail .sub-menu-head .sub-menu-head-title{
     width: 100%;
     font-size: 1rem;
     color: rgba(0,0,0,0.8);
