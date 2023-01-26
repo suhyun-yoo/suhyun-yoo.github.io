@@ -75,8 +75,8 @@ $(document).ready(function(){
     $(window).scroll(function(){
         sec1Top = $('.sec1').offset().top - 100;
         let sct = $(window).scrollTop();
-        console.log(sec1Top);
-        console.log(sct)
+        // console.log(sec1Top);
+        // console.log(sct)
 
         if(sct >= sec1Top){
             $('.banner header').addClass('active');
@@ -87,16 +87,57 @@ $(document).ready(function(){
     });
 
     // pudding financier swiper
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 5,
-        spaceBetween: 30,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
-          },
-      });
+    // window 크기값에 따라 siwper 크기 변경하기
+    $(window).resize(function(){
+        let ww = $(window).width();
+        console.log(ww);
+        if(ww >= 1000){
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 5,
+                spaceBetween: 30,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                  },
+            });
+        } else if(ww < 1000 && ww > 780){
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 4,
+                spaceBetween: 10,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                  },
+            });
+        } else if(ww <= 780 && ww > 580){
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                  },
+            });
+        } else{
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 2,
+                spaceBetween: 5,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                  },
+            });
+        }
+    });
+
 
     // swiper 영역에 마우스 호버 시, 슬라이드 멈추고
     // 마우스가 떠나면 다시 재생하기
