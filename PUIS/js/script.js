@@ -168,7 +168,7 @@ $(document).ready(function(){
     });
 
     // ===== 버튼 클릭 시, 메뉴 소개 영역 보이기
-    $('.banner header .logo').click(function(){
+    $('.banner .banner-box-wrap .banner-box .banner-box-right .txt-box a').click(function(){
         $('.sec3').show();
     });
 });
