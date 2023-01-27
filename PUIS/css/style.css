@@ -562,7 +562,95 @@ section{
 footer{
     width: 100%;
     height: 300px;
-    background-color: lightgray;
+    background-color: #F1F2F0;
+    display: flex;
+    align-items: center;
+}
+footer .footer-wrap{
+    width: 90%;
+    height: 80%;
+    margin: 0 auto;
+    border-top: 1px solid #67754771;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer-wrap .footer-left,
+footer .footer-wrap .footer-right{
+    width: 50%;
+    height: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+footer .footer-wrap .footer-left span,
+footer .footer-wrap .footer-right span,
+footer .footer-wrap .footer-left p,
+footer .footer-wrap .footer-right p{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 0.8rem;
+}
+
+/* 1. footer-left */
+footer .footer-wrap .footer-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer-wrap .footer-left h3{
+    font-size: 2rem;
+    color: #d3dad3;
+}
+footer .footer-wrap .footer-left h3 b{
+    color: #94A66D;
+}
+footer .footer-wrap .footer-left .sns-icon{
+    width: 40%;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+footer .footer-wrap .footer-left .sns-icon .icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+footer .footer-wrap .footer-left .sns-icon .icon a{
+    color: rgba(0, 0, 0, 0.1);
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    transition: 0.3s;
+}
+footer .footer-wrap .footer-left .sns-icon .icon img{
+    width: 25px;
+    height: 25px;
+    opacity: 0.1;
+    transition: 0.3s;
+}
+/* sns-icon:hover */
+footer .footer-wrap .footer-left .sns-icon .icon:hover{
+    background-color: #F1F2F0;
+}
+footer .footer-wrap .footer-left .sns-icon .icon:hover a,
+footer .footer-wrap .footer-left .sns-icon .icon:hover img{
+    opacity: 1;
+    color: black;
+}
+/* 2. footer-right */
+footer .footer-wrap .footer-right{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 /* =========== 반응형 잡기 ========== */
