@@ -73,6 +73,19 @@ $(document).ready(function(){
         $('.banner header .menu-btn').removeClass('active');
     });
 
+    // ===== header logo 클릭 시, 메인화면 돌아가기
+    $('.banner header .logo').click(function(){
+        $('.sec3').hide();
+        let ww = $(window).width();
+        if(ww > 830){
+            $('.banner .banner-box-wrap').show();
+        } else {
+            $('.banner .banner-box-wrap-mb').show();
+        }
+        $('.sec1').show();
+        $('.sec2').show();
+    });
+
     // ===== section1 section2 영역에서는 header 스타일링 변경
     $(window).scroll(function(){
         sec1Top = $('.sec1').offset().top - 100;
@@ -80,7 +93,7 @@ $(document).ready(function(){
         // console.log(sec1Top);
         // console.log(sct)
 
-        if(sct >= sec1Top){
+        if(sct> 0 && sct >= sec1Top){
             $('.banner header').addClass('active');
         } else {
             $('.banner header').removeClass('active');
@@ -184,7 +197,15 @@ $(document).ready(function(){
     });
     // 1. menu
     $('.side-menu-wrap .side-menu .menu').click(function(){
-        alert('메뉴확인페이지');
+        $('.sec3').show();
+        let ww = $(window).width();
+        if(ww > 830){
+            $('.banner .banner-box-wrap').hide();
+        } else {
+            $('.banner .banner-box-wrap-mb').hide();
+        }
+        $('.sec1').hide();
+        $('.sec2').hide();
         $('.side-menu-wrap .side-menu').removeClass('active');
     });
     // 2. ask
