@@ -283,6 +283,10 @@ border-right: none;
 }
 
 /* box6 */
+.box6{
+    padding-top: 100px;
+    text-align: center;
+}
 .box6 details{
     width: 80%;
     margin: 0 auto;
