@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+.wrap{
+    position: relative;
+}
+
+/* 1. header 영역 */
+.wrap header{
+    width: 100%;
+    height: 100vh;
+}
+.wrap header::before{
+    content: '';
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background : url(../img/bannerDark.png) no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* 1-1. nav */
+.wrap header nav{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    font-family: 'Anton', sans-serif;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 50px;
+    padding: 0 20px;
+}
+
+/* 1-2. banner */
+.wrap .banner{
+    width: 100%;
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.wrap .banner .detail1{
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+.wrap .banner .detail1 span{
+    color: #FCE524;
+}
+.wrap .banner .title{
+    font-size: 3rem;
+}
+.wrap .banner .detail2{
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: #d8d8d8;
+}
+
+/* 1-3. Btn */
+.wrap .Btn{
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    stroke: #d8d8d8;
+    stroke-width: 0.1;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+.wrap .Btn::after{
+    content: '▲';
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: #d8d8d8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.wrap .Btn svg{
+    transform: rotate(0);
+    animation: btnRotate 15s linear infinite;
+}
+@keyframes btnRotate {
+    to{
+        transform: rotate(360deg);
+    }
+}
