@@ -11,13 +11,13 @@
 a{
     color: inherit;
     text-decoration: none;
+    display: inline-block;
 }
 img, svg{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 ul,li{
     list-style: none;
 }
