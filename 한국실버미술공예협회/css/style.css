@@ -226,6 +226,7 @@
 
 /* 3. footer 영역 */
 .wrap footer{
+    margin-top: 100px;
     width: 100%;
     height: 300px;
     background-color: #0d0d0d;
