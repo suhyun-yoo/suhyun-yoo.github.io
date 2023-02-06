@@ -17,5 +17,9 @@ $(document).ready(function(){
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        autoplay: {
+            delay: 10000,
+            disableOnInteraction: false,
+          },
     });
 });
