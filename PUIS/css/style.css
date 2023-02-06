@@ -730,8 +730,8 @@ footer .footer-wrap .footer-right{
     footer .footer-wrap .footer-right{
         width: 100%;
     }
-    footer .footer-wrap .footer-left{
-    }
+    /* footer .footer-wrap .footer-left{
+    } */
     footer .footer-wrap .footer-left .sns-icon{
         height: 70px;
     }
