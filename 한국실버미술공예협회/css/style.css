@@ -425,6 +425,9 @@
     }
 }
 @media (max-width : 855px) {
+    .wrap footer select{
+        width: 50%;
+    }
     .wrap footer .txt-box{
         width: 100%;
         padding: 0 50px;
@@ -452,6 +455,9 @@
     }    
 }
 @media (max-width : 550px) {
+    .wrap footer select{
+        width: 80%;
+    }
     .wrap section{
         padding: 100px 0;
     }
@@ -460,30 +466,8 @@
     .wrap footer{
         height: 200px;
     }
-    .wrap footer .txt-box{
-        flex-direction: column;
-        height: 35%;
-        margin-top: 20px;
-    }    
     .wrap footer .txt-box p{
-        margin: 0;
-        width: 100%;
-    }
-    .wrap footer .txt-box p:nth-child(1)::after,
-    .wrap footer .txt-box p:nth-child(2)::after,
-    .wrap footer .txt-box p:nth-child(3)::after{
-        content: none;
-    }
-}
-@media (max-width : 400px) {
-    .wrap .banner .detail1{
-        font-size: 0.7rem;
-    }
-    .wrap .banner .title{
-        font-size: 1.5rem;
-    }
-    .wrap .banner .detail2{
-        font-size: 0.7rem;
+        font-size: 0.5rem;
     }
     .wrap .swiper{
         height: auto;
@@ -501,4 +485,55 @@
     .swiper-button-prev{
         display: none;
     }
+}
+@media (max-width : 430px){
+    .wrap footer .txt-box p{
+        font-size: 0.4rem;
+    }
+    .wrap footer .txt-box{
+        width: 80%;
+        height: 50px;
+        margin-top: 20px;
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }    
+    .wrap footer .txt-box p:nth-child(1),
+    .wrap footer .txt-box p:nth-child(2),
+    .wrap footer .txt-box p:nth-child(3),
+    .wrap footer .txt-box p:nth-child(4){
+        padding: 0;
+        margin: 0;
+        width: 50%;
+        height: 15px;
+    }
+    .wrap footer .txt-box p:nth-child(1)::after,
+    .wrap footer .txt-box p:nth-child(2)::after,
+    .wrap footer .txt-box p:nth-child(3)::after{
+        content: none;
+    }
+}
+@media (max-width : 400px) {
+    .wrap .banner .detail1{
+        font-size: 0.7rem;
+    }
+    .wrap .banner .title{
+        font-size: 1.5rem;
+    }
+    .wrap .banner .detail2{
+        font-size: 0.7rem;
+    }
+}
+@media (max-width : 360px) {
+    .wrap footer .txt-box{
+        flex-direction: column;
+    }
+    .wrap footer .txt-box p:nth-child(1),
+    .wrap footer .txt-box p:nth-child(2),
+    .wrap footer .txt-box p:nth-child(3),
+    .wrap footer .txt-box p:nth-child(4){
+        width: 100%;
+        height: 12px;
+    } 
 }
