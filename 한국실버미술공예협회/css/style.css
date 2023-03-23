@@ -234,7 +234,7 @@
 .wrap .intro .notice .notice-body ul li:last-child{
     border-bottom: none;
 }
-.wrap .intro .notice .notice-body ul li p{
+.wrap .intro .notice .notice-body ul li a{
     text-decoration: underline;
     font-size: 1rem;
     width: 70%;
