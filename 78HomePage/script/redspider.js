@@ -8,7 +8,7 @@ $(document).ready(function () {
 	// 1. 언어 변환 기능
   $(window).on('load', function () {
     if (localStorage.getItem('lang') === 'Ko') {
-      $('p, span, h3').each(function () {
+      $('p, span, h3, a').each(function () {
         $(this).html($(this).attr('ko'));
       });
       $('header .menu-wrap .menu.lang').html('En');
@@ -16,7 +16,7 @@ $(document).ready(function () {
       $('.sec2 .processBox .ko').show();
       $('.sec2 .processBox .en').hide();
     } else {
-      $('p, span, h3').each(function () {
+      $('p, span, h3, a').each(function () {
         $(this).html($(this).attr('en'));
       });
       $('header .menu-wrap .menu.lang').html('Ko');
@@ -29,7 +29,7 @@ $(document).ready(function () {
   $('header .menu-wrap .menu.lang').click(function () {
     if ($(this).text() === 'En') {
       $(this).text('Ko');
-      $('p, span, h3').each(function () {
+      $('p, span, h3, a').each(function () {
         $(this).html($(this).attr('en'));
       });
       $('.sec2 .processBox .ko').hide();
@@ -37,7 +37,7 @@ $(document).ready(function () {
       localStorage.setItem('lang', 'En');
     } else {
       $(this).text('En');
-      $('p, span, h3').each(function () {
+      $('p, span, h3, a').each(function () {
         $(this).html($(this).attr('ko'));
       });
       $('.sec2 .processBox .ko').show();
@@ -48,7 +48,7 @@ $(document).ready(function () {
   $('header .menuBtn ul li.lang').click(function () {
     if ($(this).text() === 'En') {
       $(this).text('Ko');
-      $('p, span, h3').each(function () {
+      $('p, span, h3, a').each(function () {
         $(this).html($(this).attr('en'));
       });
       $('.sec2 .processBox .ko').hide();
@@ -56,7 +56,7 @@ $(document).ready(function () {
       localStorage.setItem('lang', 'En');
     } else {
       $(this).text('En');
-      $('p, span, h3').each(function () {
+      $('p, span, h3, a').each(function () {
         $(this).html($(this).attr('ko'));
       });
       $('.sec2 .processBox .ko').show();

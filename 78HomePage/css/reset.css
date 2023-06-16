@@ -237,3 +237,19 @@ footer .copyrights{
   font-size: 0.8rem;
   font-weight: 100;
 }
+
+@media (max-width : 800px) {
+  footer .footer-top .snsBox{
+    width: 250px;
+  }
+  footer .footer-top .snsBox .icon{
+    width: 30px;
+    height: 30px;
+    padding: 7px;
+  }
+}
+@media (max-width : 400px) {
+  footer{
+    padding: 20px 30px;
+  }
+}

@@ -105,6 +105,12 @@ header .menu-wrap .menu a.active{
 	left: 0;
 	top: 10px;
 }
+.banner .txtBox a{
+	color: rgba(255, 255, 255, 0.6);
+	text-decoration: underline;
+	cursor: pointer;
+	margin-top: 10px;
+}
 
 /* 2. section 1 */
 .sec1{
@@ -329,5 +335,16 @@ footer .footer-top .logoBox img{
 		height: fit-content;
 		padding: 40px;
 		margin: 10px 0;
+	}
+}
+@media (max-width : 660px) {
+	html, body{
+		font-size: 80%;
+	}
+	.banner .bannerBox{
+		height: 250px;
+	}
+	.sec2{
+		padding: 100px 30px;
 	}
 }
