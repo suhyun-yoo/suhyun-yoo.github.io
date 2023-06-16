@@ -180,6 +180,7 @@ footer .footer-top .logoBox{
 footer .footer-top .logoBox img{
   filter: brightness(10);
   opacity: 0.5;
+  object-fit: contain;
 }
 footer .footer-top .txtBox{
   text-align: center;
