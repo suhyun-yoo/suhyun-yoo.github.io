@@ -164,7 +164,7 @@ $(document).ready(function () {
   });
 
   // 5. 알림창
-  $('header .menu-wrap .menu a').click(function () {
+  $('header .menu-wrap .menu a, header .menuBtn ul li a').click(function () {
     let href = $(this).attr("href");
     console.log(href);
     if (href === '#none') {
