@@ -87,7 +87,8 @@ header .menu-wrap .menu::after {
 .tabs-wrap .tab-inner .btn li.active,
 .tabs-wrap .tab-inner .btn li:hover{
   font-weight: 900;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  color: #000;
 }
 .tabs-wrap .tabs{
   width: 100%;
@@ -148,17 +149,6 @@ header .menu-wrap .menu::after {
   line-height: 25px;
   font-weight: 200;
   padding-left: 10px;
-}
-#tab1 .txtBox ul li:first-child{
-  list-style: none;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-}
-#tab1 .txtBox ul li a{
-  width: fit-content;
-  text-decoration: underline;
-  color: rgb(7, 7, 196);
 }
 #tab1 .core-value{
   width: 75%;
@@ -336,33 +326,37 @@ header .menu-wrap .menu::after {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 50px;
+  padding: 0 20px;
 }
 #tab3 .boxWrap .box:first-child{
   width: 43%;
 }
 #tab3 .boxWrap .box .icon{
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   margin: 0 auto;
 }
-#tab3 .boxWrap .txtBox{
+#tab3 .boxWrap .box .txtBox{
   display: block;
-  /* width: fit-content; */
   width: 100%;
-  height: calc(100% - 200px);
+  height: fit-content;
 }
 #tab3 .boxWrap .box p{
   font-size: 1rem;
   font-weight: 800;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
-#tab3 .boxWrap .box span{
+#tab3 .boxWrap .box span,
+#tab3 .boxWrap .box a{
   font-weight: 300;
   font-size: 1rem;
   margin: 3px 0;
   width: 100%;
+  text-align: center;
+}
+#tab3 .boxWrap .box a{
+  text-decoration: underline;
 }
 #tab3 .boxWrap .box:nth-child(1) .txtBox{
   width: fit-content;
@@ -435,6 +429,9 @@ footer .footer-top .logoBox{
   }
 }
 @media (max-width : 1200px) {
+  html, body{
+    font-size: 95%;
+  }
   .banner .txtBox{
     width: 300px;
   }
@@ -459,8 +456,8 @@ footer .footer-top .logoBox{
     height: 500px;
   }
   #tab3 .boxWrap .box .icon{
-    width: 60px;
-    height: 60px;
+    width: 35px;
+    height: 35px;
   }
   #tab3 .boxWrap .box .txtBox{
     width: 90%;
@@ -533,7 +530,7 @@ footer .footer-top .logoBox{
     margin: 0 auto;
   }
   #tab1 .txtBox ul{
-    padding: 30px;
+    padding: 50px 30px;
   }
   #tab1 .core-value{
     width: 90%;
@@ -703,11 +700,8 @@ footer .footer-top .logoBox{
     height: 400px;
   }
   #tab3 .boxWrap .box .icon{
-    width: 40px;
-    height: 40px;
-  }
-  #tab3 .boxWrap .box .txtBox{
-    height: calc(100% - 120px);
+    width: 30px;
+    height: 30px;
   }
 }
 @media (max-width : 500px) {
@@ -730,13 +724,33 @@ footer .footer-top .logoBox{
     width: 120px;
     margin: 0;
   }
-  #tab3 .boxWrap .box .txtBox .locate label{
-    margin: 5px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
-    padding-left: 10px;
+  #tab3 .boxWrap{
+    position: relative;
+    height: fit-content;
+    width: 95%;
+    height: 360px;
+    margin: 20px auto;
+  }
+  #tab3 .boxWrap .box{
+    position: absolute;
+    padding: 20px 30px;
+  }
+  #tab3 .boxWrap .box:nth-child(1){
+    width: 100%;
+    height: 160px;
+    top: 0;
+    left: 0;
+  }
+  #tab3 .boxWrap .box:nth-child(2){
+    width: 100%;
+    height: 100px;
+    top: 170px;
+    left: 0;
+  }
+  #tab3 .boxWrap .box:nth-child(3){
+    width: 100%;
+    height: 100px;
+    top: 280px;
+    right: 0;
   }
 }

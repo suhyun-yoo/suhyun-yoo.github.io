@@ -173,7 +173,7 @@ footer .footer-top{
   justify-content: center;
 }
 footer .footer-top .logoBox{
-  width: fit-content;
+  width: 100px;
   height: 35px;
   margin-bottom: 10px;
 }
@@ -188,21 +188,6 @@ footer .footer-top .txtBox{
 footer .footer-top .txtBox p{
   font-size: 0.9rem;
   margin: 5px 0;
-}
-footer .footer-top .txtBox p span{
-  width: fit-content;
-  height: fit-content;
-  padding: 0 20px;
-  position: relative;
-}
-footer .footer-top .txtBox p span:first-child::after{
-  content: '|';
-  position: absolute;
-  right: -30px;
-  top: 0;
-  font-size: 0.9rem;
-  width: 20px;
-  margin: 0 20px;
 }
 footer .footer-top .snsBox{
   width: 300px;

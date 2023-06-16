@@ -681,6 +681,23 @@ section.sec3 .sec-bottom{
     height: 300px;
   }
 }
+@media (max-width : 850px) {
+  .sec1 .sec-bottom .swiper-slide .txtBox{
+    transform: translateY(0);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+  .sec1 .sec-bottom .swiper-slide .txtBox .title{
+    height: fit-content;
+  }
+  .sec1 .sec-bottom .swiper-slide .txtBox span{
+    opacity: 1;
+    color: #fff;
+    height: fit-content;
+  }
+}
 @media (max-width : 750px) {
   html, body{
     font-size: 97%;
