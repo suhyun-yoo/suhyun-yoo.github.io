@@ -242,20 +242,12 @@
             </div>
             <p>Address</p>
             <div class="txtBox">
-              <div class="locate">
-                <input type="radio" name="locate" address-ko="서울시 서초구 서초대로 77길 55, 6층 A102호"
-                  address-en="55, Seocho-daero 77-gil, Seocho-gu, Seoul, 6th floor A102" id="wework" checked>
-                <label for="wework" 
-                  ko="<b>본사</b> : 서울시 서초구 서초대로 77길 55, 6층 A102호" 
-                  en="<b>Main Office</b> : 55, Seocho-daero 77-gil, Seocho-gu, Seoul, 6th floor A102"></label>
-              </div>
-              <div class="locate">
-                <input type="radio" name="locate" address-ko="서울시 강서구 마곡중앙 8로 14, 602호"
-                  address-en="14, Magokjungang 8-ro, Gangseo-gu, Seoul, 602" id="magok">
-                <label for="magok" 
-                  ko="<b>기업부설연구소</b> : 서울시 강서구 마곡중앙 8로 14, 602호" 
-                  en="<b>Corporate Research Institute</b> : 14, Magokjungang 8-ro, Gangseo-gu, Seoul, 602"></label>
-              </div>
+              <p for="wework" 
+                ko="<b>본사</b> : 서울시 서초구 서초대로 77길 55, 6층 A102호" 
+                en="<b>Main Office</b> : 55, Seocho-daero 77-gil, Seocho-gu, Seoul, 6th floor A102"></p>
+              <p for="magok" 
+                ko="<b>기업부설연구소</b> : 서울시 강서구 마곡중앙 8로 14, 602호" 
+                en="<b>Corporate Research Institute</b> : 14, Magokjungang 8-ro, Gangseo-gu, Seoul, 602"></p>
             </div>
           </div>
           <div class="box">
@@ -273,22 +265,26 @@
             <a href="mailto:contact@78researchlab.com" title="Contact 78ResearchLab" target="_blank"  class="txtBox">contact at 78researchlab.com</a>
           </div>
         </div>
-        <!-- 본사 지도 -->
-        <div id="daumRoughmapContainer1686044141631" class="wework root_daum_roughmap root_daum_roughmap_landing"></div>
-        <script>
-          new daum.roughmap.Lander({
-            "timestamp" : "1686044141631",
-            "key" : "2f2b8",
-          }).render();
-        </script>
-        <!-- 기업부설연구소 지도 -->
-        <div id="daumRoughmapContainer1686044899318" class="magok root_daum_roughmap root_daum_roughmap_landing"></div>
-        <script>
-          new daum.roughmap.Lander({
-            "timestamp" : "1686044899318",
-            "key" : "2f2ba",
-          }).render();
-        </script>
+
+        <div class="map-wrap">
+          <!-- 본사 지도 -->
+          <div id="daumRoughmapContainer1686044141631" class="wework root_daum_roughmap root_daum_roughmap_landing"></div>
+          <script>
+            new daum.roughmap.Lander({
+              "timestamp" : "1686044141631",
+              "key" : "2f2b8",
+            }).render();
+          </script>
+          <!-- 기업부설연구소 지도 -->
+          <div id="daumRoughmapContainer1686044899318" class="magok root_daum_roughmap root_daum_roughmap_landing"></div>
+          <script>
+            new daum.roughmap.Lander({
+              "timestamp" : "1686044899318",
+              "key" : "2f2ba",
+            }).render();
+          </script>
+        </div>
+
       </div>
     </div>
   </div>

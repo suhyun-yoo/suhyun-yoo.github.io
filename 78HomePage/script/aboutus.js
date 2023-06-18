@@ -49,28 +49,6 @@ $(document).ready(function () {
       transform: 'translateX(0)'
     });
   });
-
-  // $('header .menu-wrap .menu.lang').click(function () {
-  //   if ($(this).text() === 'En') {
-  //     $(this).text('Ko');
-  //     $('p, span, b').each(function () {
-  //       $(this).html($(this).attr('en'));
-  //     });
-  //     $('.tabs .tab .core-value .value .card .valueName').hide();
-  //     $('.tabs .tab .locationBtn label').each(function () {
-  //       $(this).html($(this).attr('en'));
-  //     });
-  //   } else {
-  //     $(this).text('En');
-  //     $('p, span, b').each(function () {
-  //       $(this).html($(this).attr('ko'));
-  //     });
-  //     $('.tabs .tab .core-value .value .card .valueName').show();
-  //     $('.tabs .tab .locationBtn label').each(function () {
-  //       $(this).html($(this).attr('ko'));
-  //     });
-  //   }
-  // });
   
   // 1. tab
   $(".btn li").click(function (event) {
