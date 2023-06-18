@@ -191,7 +191,7 @@ $(document).ready(function () {
   $('.sec3 .sec-bottom .box-middle .box-top').click(function () {
     location.href = 'AboutUs.html?tab=2';
   });
-  $('.sec3 .sec-bottom .box-right').click(function () {
+  $('.sec3 .sec-bottom .box-middle .box-bottom .bottom-left a').click(function () {
     location.href = 'AboutUs.html?tab=3';
   });
 
