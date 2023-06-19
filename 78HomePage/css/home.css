@@ -413,7 +413,7 @@ section.sec3 .sec-bottom{
 .sec3 .sec-bottom .box-left .core-value{
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)) ,url('../../img/corevalue.png') no-repeat center center;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)) ,url('../img/corevalue.png') no-repeat center center;
   background-size: cover;
 }
 .sec3 .sec-bottom .box-middle .box-top {
@@ -464,13 +464,13 @@ section.sec3 .sec-bottom{
 }
 .sec3 .sec-bottom .box-middle .box-top{
   margin-bottom: 30px;
-  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../../img/aboutUs_HowWeWork.jpg') no-repeat center center;
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../img/aboutUs_HowWeWork.jpg') no-repeat center center;
   background-size: cover;
 }
 .sec3 .sec-bottom .box-right .career{
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../../img/인재채용2.jpg') no-repeat center center;
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../img/인재채용2.jpg') no-repeat center center;
   background-size: cover;
 }
 .sec3 .sec-bottom .box-left .core-value,
